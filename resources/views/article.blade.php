@@ -11,8 +11,8 @@
             <div class="article-meta">
                 <p><span>{{$article->category->category_name}}</span> <i class="far fa-calendar-alt"></i>{{$article->created_at->format("d/m/Y")}} <i class="far fa-clock"></i> {{$article->created_at->format("H:i")}}</p>
             </div>
-            <img src="/storage/cover_images/{{$article->image}}" alt="">
-            <p>{{$article->body}}</p>
+            <img src="/storage/{{$article->image}}" alt="">
+            {!!$article->body!!}
         </div>
         <div class="white-box facebook-box">
             <div class="fb-comments" data-href="{{Request::url()}}" data-numposts="5"></div>        
