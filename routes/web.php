@@ -29,7 +29,7 @@ Route::group(['prefix' => '{lang?}','middleware' => 'localization'],function() {
     })->name('videosRoute'); 
     
     Route::get('article/{anchor}', 'PagesController@getArticle');     
-    Route::get('/', 'PagesController@index'); 
+    Route::get('/', 'PagesController@index')->middleware("TranslateApi"); 
     
 });
 

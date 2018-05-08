@@ -93,7 +93,27 @@ class PagesController extends Controller
             $article->category;
         });
 
-        dd ($articles);
+        // $rank_script ='"'.storage_path("app/scripts/scrapScriptRank.py").'"';        
+        // exec ("python $rank_script", $output,$return);
+        
+        // //  Return will return non-zero upon an error
+        // if (!$return) {
+        //    //
+        // } else {
+        //     echo "problem detected, Baladi!";
+        //     die();
+        // }
+        
+        
+        $botola_rank = File::get("Botola_Rank.json");
+        $pl_rank = File::get("PL_Rank.json");
+        $laliga_rank = File::get("LaLiga_Rank.json");
+        $seriea_rank = File::get("SerieA_Rank.json");
+
+        
+        
+        $more_articles=$articles->splice(14);
+        return view('index', compact('articles','more_articles','pl_rank','seriea_rank','laliga_rank','botola_rank','titles'));
     }
 
 }

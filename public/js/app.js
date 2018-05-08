@@ -47802,10 +47802,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("img", {
-            attrs: {
-              src: "/storage/cover_images/" + _vm.article.image,
-              alt: ""
-            }
+            attrs: { src: "/storage/" + _vm.article.image, alt: "" }
           })
         ]),
         _vm._v(" "),
@@ -47971,10 +47968,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("img", {
-            attrs: {
-              src: "/storage/cover_images/" + _vm.article.image,
-              alt: ""
-            }
+            attrs: { src: "/storage/" + _vm.article.image, alt: "" }
           })
         ]),
         _vm._v(" "),
@@ -48140,10 +48134,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("img", {
-            attrs: {
-              src: "/storage/cover_images/" + _vm.article.image,
-              alt: ""
-            }
+            attrs: { src: "/storage/" + _vm.article.image, alt: "" }
           })
         ]),
         _vm._v(" "),
@@ -48248,9 +48239,7 @@ var render = function() {
       _c("h3", [_vm._v(_vm._s(_vm.video.heading))])
     ]),
     _vm._v(" "),
-    _c("img", {
-      attrs: { src: "/storage/cover_images/" + _vm.video.image, alt: "" }
-    })
+    _c("img", { attrs: { src: "/storage/" + _vm.video.image, alt: "" } })
   ])
 }
 var staticRenderFns = []
@@ -49284,7 +49273,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.bottom-video-card-group{\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-orient : horizontal;\n    -webkit-box-direction : normal;\n        -ms-flex-direction : row;\n            flex-direction : row;\n    width: 100%;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n}\n.triple-video-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    width: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.double-video-small-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n.video-card{\n    position : relative;\n    overflow: hidden;\n}\n.large-video-card{\n    width: 410px;\n    height : 360px;\n    margin: 0 10px;\n}\n.small-video-card{\n    width: 200px;\n    height: 175px;\n    margin-bottom: 10px;\n}\n.video-thumbnail-container img{\n    width : auto;\n    height: 100%;\n}\n.video-thumbnail-container{\n    width: 100%;\n    height: 100%;\n    position: relative;\n}\n.video-thumbnail-container:after{\n    content: '';\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, .5);\n    position :absolute;\n    top: 0;\n    -webkit-transition : .2s opacity;\n    transition : .2s opacity;\n    right: 0;\n}\n.watch-button{\n    border-radius: 20px;\n    height: auto;\n    padding: 2px 25px;\n    text-align: center;\n    background: #f5f6fa;\n    font-family: 'Cairo', sans-serif;        \n    font-weight : bold;\n    border : none;\n    color: #2C3A47;\n    outline: none;\n    cursor: pointer;\n}\n.title-n-button svg{\n    margin : 0 0 0 10px;\n    color: #6D214F;\n}\n.title-n-button{\n    position: absolute;\n    padding: 15px 10px;\n    bottom:0;\n    right:0;\n    left:0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.title-n-button h3{\n    text-align: right;\n    color: #f5f6fa; \n    font-size: 15px;\n}\n.large-video-card .title-n-button h3{\n    font-size: 1.17em;\n}\n.more-vids-btn{\n    background: #55E6C1;\n    color : #2C3A47;\n    margin: 20px auto;\n    padding: 0 50px;\n    cursor: pointer;\n    height:50px;\n}\n.more-vids-btn h2{\n    margin : 0;\n    display: inline-block;\n}\n.videos-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    direction :rtl;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    margin: auto;\n    -ms-flex-wrap : wrap;\n        flex-wrap : wrap;\n    width: 830px;\n}\n@media (max-width : 830px){\n.triple-video-group{\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n}\n.large-video-card{\n        margin: 0;\n        -webkit-box-ordinal-group : 2;\n            -ms-flex-order : 1;\n                order : 1;\n        margin-bottom: 10px;\n}\n.videos-container{\n        width: 410px;\n}\n.double-video-small-group{\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: row;\n                flex-direction: row;\n        -webkit-box-pack: justify;\n            -ms-flex-pack: justify;\n                justify-content: space-between;\n        -webkit-box-ordinal-group : 3;\n            -ms-flex-order : 2;\n                order : 2;\n}\n.bottom-video-card-group{\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n}\n}\n@media (max-width : 430px){\n.videos-container{\n        width: 80%;\n}\n.small-video-card{\n        width : 49%;\n        height:133px;\n        font-size:12px;\n}\n.watch-btn{\n        padding: 2px 10px;\n}\n.title-n-button h3{\n        font-size: 13px;\n}\n.large-video-card{\n        height : 260px;\n        width: 100%;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n.bottom-video-card-group{\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-orient : horizontal;\n    -webkit-box-direction : normal;\n        -ms-flex-direction : row;\n            flex-direction : row;\n    width: 100%;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n}\n.triple-video-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    width: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.double-video-small-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n.video-card{\n    position : relative;\n    overflow: hidden;\n}\n.large-video-card{\n    width: 410px;\n    height : 360px;\n    margin: 0 10px;\n}\n.small-video-card{\n    width: 200px;\n    height: 175px;\n    margin-bottom: 10px;\n}\n.video-thumbnail-container img{\n    width : auto;\n    height: 100%;\n}\n.video-thumbnail-container{\n    width: 100%;\n    height: 100%;\n    position: relative;\n}\n.video-thumbnail-container:after{\n    content: '';\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, .5);\n    position :absolute;\n    top: 0;\n    -webkit-transition : .2s opacity;\n    transition : .2s opacity;\n    right: 0;\n}\n.watch-button{\n    border-radius: 20px;\n    height: auto;\n    padding: 2px 25px;\n    text-align: center;\n    background: #f5f6fa;\n    font-family: 'Cairo', sans-serif;        \n    font-weight : bold;\n    border : none;\n    color: #2C3A47;\n    outline: none;\n    cursor: pointer;\n}\n.title-n-button svg{\n    margin : 0 0 0 10px;\n    color: #6D214F;\n}\n.title-n-button{\n    position: absolute;\n    padding: 15px 10px;\n    bottom:0;\n    right:0;\n    left:0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.title-n-button h3{\n    text-align: right;\n    color: #f5f6fa; \n    font-size: 15px;\n}\n.large-video-card .title-n-button h3{\n    font-size: 1.17em;\n}\n.more-vids-btn{\n    background: #55E6C1;\n    color : #2C3A47;\n    margin: 20px auto;\n    padding: 0 50px;\n    cursor: pointer;\n    height:50px;\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 120px;\n}\n.more-vids-btn h2{\n    margin : 0;\n    display: inline-block;\n}\n.videos-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    direction :rtl;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    margin: auto;\n    -ms-flex-wrap : wrap;\n        flex-wrap : wrap;\n    width: 830px;\n}\n@media (max-width : 830px){\n.triple-video-group{\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n}\n.large-video-card{\n        margin: 0;\n        -webkit-box-ordinal-group : 2;\n            -ms-flex-order : 1;\n                order : 1;\n        margin-bottom: 10px;\n}\n.videos-container{\n        width: 410px;\n}\n.double-video-small-group{\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: row;\n                flex-direction: row;\n        -webkit-box-pack: justify;\n            -ms-flex-pack: justify;\n                justify-content: space-between;\n        -webkit-box-ordinal-group : 3;\n            -ms-flex-order : 2;\n                order : 2;\n}\n.bottom-video-card-group{\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n}\n}\n@media (max-width : 430px){\n.videos-container{\n        width: 80%;\n}\n.small-video-card{\n        width : 49%;\n        height:133px;\n        font-size:12px;\n}\n.watch-btn{\n        padding: 2px 10px;\n}\n.title-n-button h3{\n        font-size: 13px;\n}\n.large-video-card{\n        height : 260px;\n        width: 100%;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -49295,6 +49284,8 @@ exports.push([module.i, "\n.bottom-video-card-group{\n    display : -webkit-box;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -49449,203 +49440,200 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.videos
-    ? _c(
-        "div",
-        { staticClass: "videos-container" },
-        [
-          _c("div", { staticClass: "indicator" }, [
-            _c("h1", [_vm._v(_vm._s(_vm.indicator))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "triple-video-group" }, [
-            _c("div", { staticClass: "double-video-small-group" }, [
-              _c("div", { staticClass: "small-video-card video-card" }, [
-                _c("div", { staticClass: "video-thumbnail-container" }, [
-                  _c("img", { attrs: { src: _vm.videos[1].image, alt: "" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "title-n-button" }, [
-                  _c("h3", [_vm._v(_vm._s(_vm.videos[1].heading))]),
+  return _c("div", [
+    _vm.videos
+      ? _c(
+          "div",
+          { staticClass: "videos-container" },
+          [
+            _c("div", { staticClass: "indicator" }, [
+              _c("h1", [_vm._v(_vm._s(_vm.indicator))])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "triple-video-group" }, [
+              _c("div", { staticClass: "double-video-small-group" }, [
+                _c("div", { staticClass: "small-video-card video-card" }, [
+                  _c("div", { staticClass: "video-thumbnail-container" }, [
+                    _c("img", { attrs: { src: _vm.videos[1].image, alt: "" } })
+                  ]),
                   _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "small-video-card video-card" }, [
-                _c("div", { staticClass: "video-thumbnail-container" }, [
-                  _c("img", { attrs: { src: _vm.videos[2].image, alt: "" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "title-n-button" }, [
-                  _c("h3", [_vm._v(_vm._s(_vm.videos[2].heading))]),
-                  _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "large-video-card video-card" }, [
-              _c("div", { staticClass: "video-thumbnail-container" }, [
-                _c("img", { attrs: { src: _vm.videos[0].image, alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "title-n-button" }, [
-                _c("h3", [_vm._v(" " + _vm._s(_vm.videos[0].heading) + " ")]),
-                _vm._v(" "),
-                _c("button", { staticClass: "watch-button" }, [
-                  _c("i", { staticClass: "fas fa-play-circle" }),
-                  _vm._v(_vm._s(_vm.watch))
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "double-video-small-group" }, [
-              _c("div", { staticClass: "small-video-card video-card" }, [
-                _c("div", { staticClass: "video-thumbnail-container" }, [
-                  _c("img", { attrs: { src: _vm.videos[3].image, alt: "" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "title-n-button" }, [
-                  _c("h3", [_vm._v(_vm._s(_vm.videos[3].heading))]),
-                  _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "small-video-card video-card" }, [
-                _c("div", { staticClass: "video-thumbnail-container" }, [
-                  _c("img", { attrs: { src: _vm.videos[4].image, alt: "" } })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "title-n-button" }, [
-                  _c("h3", [_vm._v(_vm._s(_vm.videos[4].heading))]),
-                  _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "bottom-video-card-group" }, [
-            _c("div", { staticClass: "small-video-card video-card" }, [
-              _c("div", { staticClass: "video-thumbnail-container" }, [
-                _c("img", { attrs: { src: _vm.videos[5].image, alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "title-n-button" }, [
-                _c("h3", [_vm._v(_vm._s(_vm.videos[5].heading))]),
-                _vm._v(" "),
-                _c("button", { staticClass: "watch-button" }, [
-                  _c("i", { staticClass: "fas fa-play-circle" }),
-                  _vm._v(_vm._s(_vm.watch))
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "small-video-card video-card" }, [
-              _c("div", { staticClass: "video-thumbnail-container" }, [
-                _c("img", { attrs: { src: _vm.videos[6].image, alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "title-n-button" }, [
-                _c("h3", [_vm._v(_vm._s(_vm.videos[6].heading))]),
-                _vm._v(" "),
-                _c("button", { staticClass: "watch-button" }, [
-                  _c("i", { staticClass: "fas fa-play-circle" }),
-                  _vm._v(_vm._s(_vm.watch))
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "small-video-card video-card" }, [
-              _c("div", { staticClass: "video-thumbnail-container" }, [
-                _c("img", { attrs: { src: _vm.videos[7].image, alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "title-n-button" }, [
-                _c("h3", [_vm._v(_vm._s(_vm.videos[7].heading))]),
-                _vm._v(" "),
-                _c("button", { staticClass: "watch-button" }, [
-                  _c("i", { staticClass: "fas fa-play-circle" }),
-                  _vm._v(_vm._s(_vm.watch))
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "small-video-card video-card" }, [
-              _c("div", { staticClass: "video-thumbnail-container" }, [
-                _c("img", { attrs: { src: _vm.videos[8].image, alt: "" } })
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "title-n-button" }, [
-                _c("h3", [_vm._v(_vm._s(_vm.videos[8].heading))]),
-                _vm._v(" "),
-                _c("button", { staticClass: "watch-button" }, [
-                  _c("i", { staticClass: "fas fa-play-circle" }),
-                  _vm._v(_vm._s(_vm.watch))
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._l(_vm.videos, function(video, index) {
-            return index > 8
-              ? _c(
-                  "div",
-                  { key: index, staticClass: "small-video-card video-card" },
-                  [
-                    _c("div", { staticClass: "video-thumbnail-container" }, [
-                      _c("img", { attrs: { src: video.image, alt: "" } })
-                    ]),
+                  _c("div", { staticClass: "title-n-button" }, [
+                    _c("h3", [_vm._v(_vm._s(_vm.videos[1].heading))]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "title-n-button" }, [
-                      _c("h3", [_vm._v(_vm._s(video.heading))]),
-                      _vm._v(" "),
-                      _c("button", { staticClass: "watch-button" }, [
-                        _c("i", { staticClass: "fas fa-play-circle" }),
-                        _vm._v(_vm._s(_vm.watch))
-                      ])
+                    _c("button", { staticClass: "watch-button" }, [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
                     ])
-                  ]
-                )
-              : _vm._e()
-          }),
-          _vm._v(" "),
-          !_vm.isload
-            ? _c(
-                "a",
-                { staticClass: "more-vids-btn", attrs: { href: _vm.route } },
-                [_c("h2", [_vm._v(_vm._s(_vm.more))])]
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.isload
-            ? _c(
-                "a",
-                {
-                  staticClass: "more-vids-btn",
-                  on: { click: _vm.getMoreVideos }
-                },
-                [_c("h2", [_vm._v(_vm._s(_vm.load))])]
-              )
-            : _vm._e()
-        ],
-        2
-      )
-    : _vm._e()
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "small-video-card video-card" }, [
+                  _c("div", { staticClass: "video-thumbnail-container" }, [
+                    _c("img", { attrs: { src: _vm.videos[2].image, alt: "" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "title-n-button" }, [
+                    _c("h3", [_vm._v(_vm._s(_vm.videos[2].heading))]),
+                    _vm._v(" "),
+                    _c("button", { staticClass: "watch-button" }, [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "large-video-card video-card" }, [
+                _c("div", { staticClass: "video-thumbnail-container" }, [
+                  _c("img", { attrs: { src: _vm.videos[0].image, alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "title-n-button" }, [
+                  _c("h3", [_vm._v(" " + _vm._s(_vm.videos[0].heading) + " ")]),
+                  _vm._v(" "),
+                  _c("button", { staticClass: "watch-button" }, [
+                    _c("i", { staticClass: "fas fa-play-circle" }),
+                    _vm._v(_vm._s(_vm.watch))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "double-video-small-group" }, [
+                _c("div", { staticClass: "small-video-card video-card" }, [
+                  _c("div", { staticClass: "video-thumbnail-container" }, [
+                    _c("img", { attrs: { src: _vm.videos[3].image, alt: "" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "title-n-button" }, [
+                    _c("h3", [_vm._v(_vm._s(_vm.videos[3].heading))]),
+                    _vm._v(" "),
+                    _c("button", { staticClass: "watch-button" }, [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "small-video-card video-card" }, [
+                  _c("div", { staticClass: "video-thumbnail-container" }, [
+                    _c("img", { attrs: { src: _vm.videos[4].image, alt: "" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "title-n-button" }, [
+                    _c("h3", [_vm._v(_vm._s(_vm.videos[4].heading))]),
+                    _vm._v(" "),
+                    _c("button", { staticClass: "watch-button" }, [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "bottom-video-card-group" }, [
+              _c("div", { staticClass: "small-video-card video-card" }, [
+                _c("div", { staticClass: "video-thumbnail-container" }, [
+                  _c("img", { attrs: { src: _vm.videos[5].image, alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "title-n-button" }, [
+                  _c("h3", [_vm._v(_vm._s(_vm.videos[5].heading))]),
+                  _vm._v(" "),
+                  _c("button", { staticClass: "watch-button" }, [
+                    _c("i", { staticClass: "fas fa-play-circle" }),
+                    _vm._v(_vm._s(_vm.watch))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "small-video-card video-card" }, [
+                _c("div", { staticClass: "video-thumbnail-container" }, [
+                  _c("img", { attrs: { src: _vm.videos[6].image, alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "title-n-button" }, [
+                  _c("h3", [_vm._v(_vm._s(_vm.videos[6].heading))]),
+                  _vm._v(" "),
+                  _c("button", { staticClass: "watch-button" }, [
+                    _c("i", { staticClass: "fas fa-play-circle" }),
+                    _vm._v(_vm._s(_vm.watch))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "small-video-card video-card" }, [
+                _c("div", { staticClass: "video-thumbnail-container" }, [
+                  _c("img", { attrs: { src: _vm.videos[7].image, alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "title-n-button" }, [
+                  _c("h3", [_vm._v(_vm._s(_vm.videos[7].heading))]),
+                  _vm._v(" "),
+                  _c("button", { staticClass: "watch-button" }, [
+                    _c("i", { staticClass: "fas fa-play-circle" }),
+                    _vm._v(_vm._s(_vm.watch))
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "small-video-card video-card" }, [
+                _c("div", { staticClass: "video-thumbnail-container" }, [
+                  _c("img", { attrs: { src: _vm.videos[8].image, alt: "" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "title-n-button" }, [
+                  _c("h3", [_vm._v(_vm._s(_vm.videos[8].heading))]),
+                  _vm._v(" "),
+                  _c("button", { staticClass: "watch-button" }, [
+                    _c("i", { staticClass: "fas fa-play-circle" }),
+                    _vm._v(_vm._s(_vm.watch))
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._l(_vm.videos, function(video, index) {
+              return index > 8
+                ? _c(
+                    "div",
+                    { key: index, staticClass: "small-video-card video-card" },
+                    [
+                      _c("div", { staticClass: "video-thumbnail-container" }, [
+                        _c("img", { attrs: { src: video.image, alt: "" } })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "title-n-button" }, [
+                        _c("h3", [_vm._v(_vm._s(video.heading))]),
+                        _vm._v(" "),
+                        _c("button", { staticClass: "watch-button" }, [
+                          _c("i", { staticClass: "fas fa-play-circle" }),
+                          _vm._v(_vm._s(_vm.watch))
+                        ])
+                      ])
+                    ]
+                  )
+                : _vm._e()
+            })
+          ],
+          2
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.isload
+      ? _c("a", { staticClass: "more-vids-btn", attrs: { href: _vm.route } }, [
+          _c("h2", [_vm._v(_vm._s(_vm.more))])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.isload
+      ? _c(
+          "a",
+          { staticClass: "more-vids-btn", on: { click: _vm.getMoreVideos } },
+          [_c("h2", [_vm._v(_vm._s(_vm.load))])]
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -15,7 +15,7 @@ class TranslateApi
      */
     public function handle($request, Closure $next)
     {
-        $segment = segment(1);
+        $segment = $request->segment(1);
 
         if ($segment=="en"){
             dd($pl_rank);

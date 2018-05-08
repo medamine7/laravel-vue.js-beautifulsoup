@@ -3,7 +3,7 @@
         <div class="title-container">
             <h3>{{video.heading}}</h3>
         </div>
-        <img :src='"/storage/cover_images/"+video.image' alt="">
+        <img :src='"/storage/"+video.image' alt="">
     </div>
 </template>
 

@@ -1,109 +1,111 @@
 <template>
-    <div v-if="videos" class="videos-container">
-        <div class="indicator"><h1>{{indicator}}</h1></div>        
-        <div class="triple-video-group">
-            <div class="double-video-small-group">
-                <div class="small-video-card video-card">
+    <div>
+        <div v-if="videos" class="videos-container">
+            <div class="indicator"><h1>{{indicator}}</h1></div>        
+            <div class="triple-video-group">
+                <div class="double-video-small-group">
+                    <div class="small-video-card video-card">
+                        <div class="video-thumbnail-container">
+                            <img :src="videos[1].image" alt="">
+                        </div>
+                        <div class="title-n-button">
+                            <h3>{{videos[1].heading}}</h3>
+                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        </div>
+                    </div>
+                    <div class="small-video-card video-card">
+                        <div class="video-thumbnail-container">
+                            <img :src="videos[2].image" alt="">
+                        </div>
+                        <div class="title-n-button">
+                            <h3>{{videos[2].heading}}</h3>
+                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="large-video-card video-card">
                     <div class="video-thumbnail-container">
-                        <img :src="videos[1].image" alt="">
+                        <img :src="videos[0].image" alt="">
                     </div>
                     <div class="title-n-button">
-                        <h3>{{videos[1].heading}}</h3>
+                        <h3> {{videos[0].heading}} </h3>
+                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                    </div>
+                </div>
+                <div class="double-video-small-group">
+                    <div class="small-video-card video-card">
+                        <div class="video-thumbnail-container">
+                            <img :src="videos[3].image" alt="">
+                        </div>
+                        <div class="title-n-button">
+                            <h3>{{videos[3].heading}}</h3>
+                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        </div>
+                    </div>
+                    <div class="small-video-card video-card">
+                        <div class="video-thumbnail-container">
+                            <img :src="videos[4].image" alt="">
+                        </div>
+                        <div class="title-n-button">
+                            <h3>{{videos[4].heading}}</h3>
+                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="bottom-video-card-group">
+                <div class="small-video-card video-card">
+                    <div class="video-thumbnail-container">
+                        <img :src="videos[5].image" alt="">
+                    </div>
+                    <div class="title-n-button">
+                        <h3>{{videos[5].heading}}</h3>
                         <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
                     </div>
                 </div>
                 <div class="small-video-card video-card">
                     <div class="video-thumbnail-container">
-                        <img :src="videos[2].image" alt="">
+                        <img :src="videos[6].image" alt="">
                     </div>
                     <div class="title-n-button">
-                        <h3>{{videos[2].heading}}</h3>
+                        <h3>{{videos[6].heading}}</h3>
+                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                    </div>
+                </div>
+                <div class="small-video-card video-card">
+                    <div class="video-thumbnail-container">
+                        <img :src="videos[7].image" alt="">
+                    </div>
+                    <div class="title-n-button">
+                        <h3>{{videos[7].heading}}</h3>
+                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                    </div>
+                </div>
+                <div class="small-video-card video-card">
+                    <div class="video-thumbnail-container">
+                        <img :src="videos[8].image" alt="">
+                    </div>
+                    <div class="title-n-button">
+                        <h3>{{videos[8].heading}}</h3>
                         <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
                     </div>
                 </div>
             </div>
-            <div class="large-video-card video-card">
-                <div class="video-thumbnail-container">
-                    <img :src="videos[0].image" alt="">
-                </div>
-                <div class="title-n-button">
-                    <h3> {{videos[0].heading}} </h3>
-                    <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                <!-- loaded videos -->
+                <div :key="index" v-if="index>8" v-for="(video,index) in videos" class="small-video-card video-card">
+                    <div class="video-thumbnail-container">
+                        <img :src="video.image" alt="">
+                    </div>
+                    <div class="title-n-button">
+                        <h3>{{video.heading}}</h3>
+                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                    </div>
                 </div>
             </div>
-            <div class="double-video-small-group">
-                <div class="small-video-card video-card">
-                    <div class="video-thumbnail-container">
-                        <img :src="videos[3].image" alt="">
-                    </div>
-                    <div class="title-n-button">
-                        <h3>{{videos[3].heading}}</h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
-                    </div>
-                </div>
-                <div class="small-video-card video-card">
-                    <div class="video-thumbnail-container">
-                        <img :src="videos[4].image" alt="">
-                    </div>
-                    <div class="title-n-button">
-                        <h3>{{videos[4].heading}}</h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
-                    </div>
-                </div>
-            </div>    
+        
+            <a v-if="!isload" :href="route" class="more-vids-btn"><h2>{{more}}</h2></a>                  
+            <a v-if="isload" class="more-vids-btn" @click="getMoreVideos"><h2>{{load}}</h2></a>                  
         </div>
-        <div class="bottom-video-card-group">
-            <div class="small-video-card video-card">
-                <div class="video-thumbnail-container">
-                    <img :src="videos[5].image" alt="">
-                </div>
-                <div class="title-n-button">
-                    <h3>{{videos[5].heading}}</h3>
-                    <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
-                </div>
-            </div>
-            <div class="small-video-card video-card">
-                <div class="video-thumbnail-container">
-                    <img :src="videos[6].image" alt="">
-                </div>
-                <div class="title-n-button">
-                    <h3>{{videos[6].heading}}</h3>
-                    <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
-                </div>
-            </div>
-            <div class="small-video-card video-card">
-                <div class="video-thumbnail-container">
-                    <img :src="videos[7].image" alt="">
-                </div>
-                <div class="title-n-button">
-                    <h3>{{videos[7].heading}}</h3>
-                    <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
-                </div>
-            </div>
-            <div class="small-video-card video-card">
-                <div class="video-thumbnail-container">
-                    <img :src="videos[8].image" alt="">
-                </div>
-                <div class="title-n-button">
-                    <h3>{{videos[8].heading}}</h3>
-                    <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
-                </div>
-            </div>
-        </div>
-            <!-- loaded videos -->
-            <div :key="index" v-if="index>8" v-for="(video,index) in videos" class="small-video-card video-card">
-                <div class="video-thumbnail-container">
-                    <img :src="video.image" alt="">
-                </div>
-                <div class="title-n-button">
-                    <h3>{{video.heading}}</h3>
-                    <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
-                </div>
-            </div>
-    
-        <a v-if="!isload" :href="route" class="more-vids-btn"><h2>{{more}}</h2></a>                  
-        <a v-if="isload" class="more-vids-btn" @click="getMoreVideos"><h2>{{load}}</h2></a>                  
-    </div>
 </template>
 
 <script>
@@ -262,6 +264,9 @@ export default {
         padding: 0 50px;
         cursor: pointer;
         height:50px;
+        display : flex;
+        justify-content: center;
+        width: 120px;
     }
 
     .more-vids-btn h2{
