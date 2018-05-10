@@ -267,6 +267,7 @@ export default {
         display : flex;
         justify-content: center;
         width: 120px;
+        white-space : nowrap;
     }
 
     .more-vids-btn h2{

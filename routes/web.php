@@ -29,6 +29,9 @@ Route::group(['prefix' => '{lang?}','middleware' => 'localization'],function() {
     })->name('videosRoute'); 
     
     Route::get('article/{slug}', 'PagesController@getArticle');     
+    Route::get('video/{slug}', function(){
+        return view('showroom');
+    });     
     Route::get('/', 'PagesController@index'); 
     
 });

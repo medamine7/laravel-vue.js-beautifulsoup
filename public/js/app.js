@@ -1418,6 +1418,7 @@ Vue.component("headlines", __webpack_require__(72));
 Vue.component("article-modal", __webpack_require__(75));
 Vue.component("menu-hamburger", __webpack_require__(80));
 Vue.component("videos", __webpack_require__(85));
+Vue.component("sub-alert", __webpack_require__(98));
 
 var app = new Vue({
     el: '#app',
@@ -49279,7 +49280,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.bottom-video-card-group{\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-orient : horizontal;\n    -webkit-box-direction : normal;\n        -ms-flex-direction : row;\n            flex-direction : row;\n    width: 100%;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n}\n.triple-video-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    width: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.double-video-small-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n.video-card{\n    position : relative;\n    overflow: hidden;\n}\n.large-video-card{\n    width: 410px;\n    height : 360px;\n    margin: 0 10px;\n}\n.small-video-card{\n    width: 200px;\n    height: 175px;\n    margin-bottom: 10px;\n}\n.video-thumbnail-container img{\n    width : auto;\n    height: 100%;\n}\n.video-thumbnail-container{\n    width: 100%;\n    height: 100%;\n    position: relative;\n}\n.video-thumbnail-container:after{\n    content: '';\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, .5);\n    position :absolute;\n    top: 0;\n    -webkit-transition : .2s opacity;\n    transition : .2s opacity;\n    right: 0;\n}\n.watch-button{\n    border-radius: 20px;\n    height: auto;\n    padding: 2px 25px;\n    text-align: center;\n    background: #f5f6fa;\n    font-family: 'Cairo', sans-serif;        \n    font-weight : bold;\n    border : none;\n    color: #2C3A47;\n    outline: none;\n    cursor: pointer;\n}\n.title-n-button svg{\n    margin : 0 0 0 10px;\n    color: #6D214F;\n}\n.title-n-button{\n    position: absolute;\n    padding: 15px 10px;\n    bottom:0;\n    right:0;\n    left:0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.title-n-button h3{\n    text-align: right;\n    color: #f5f6fa; \n    font-size: 15px;\n}\n.large-video-card .title-n-button h3{\n    font-size: 1.17em;\n}\n.more-vids-btn{\n    background: #55E6C1;\n    color : #2C3A47;\n    margin: 20px auto;\n    padding: 0 50px;\n    cursor: pointer;\n    height:50px;\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 120px;\n}\n.more-vids-btn h2{\n    margin : 0;\n    display: inline-block;\n}\n.videos-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    direction :rtl;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    margin: auto;\n    -ms-flex-wrap : wrap;\n        flex-wrap : wrap;\n    width: 830px;\n}\n@media (max-width : 830px){\n.triple-video-group{\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n}\n.large-video-card{\n        margin: 0;\n        -webkit-box-ordinal-group : 2;\n            -ms-flex-order : 1;\n                order : 1;\n        margin-bottom: 10px;\n}\n.videos-container{\n        width: 410px;\n}\n.double-video-small-group{\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: row;\n                flex-direction: row;\n        -webkit-box-pack: justify;\n            -ms-flex-pack: justify;\n                justify-content: space-between;\n        -webkit-box-ordinal-group : 3;\n            -ms-flex-order : 2;\n                order : 2;\n}\n.bottom-video-card-group{\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n}\n}\n@media (max-width : 430px){\n.videos-container{\n        width: 80%;\n}\n.small-video-card{\n        width : 49%;\n        height:133px;\n        font-size:12px;\n}\n.watch-btn{\n        padding: 2px 10px;\n}\n.title-n-button h3{\n        font-size: 13px;\n}\n.large-video-card{\n        height : 260px;\n        width: 100%;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n.bottom-video-card-group{\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-orient : horizontal;\n    -webkit-box-direction : normal;\n        -ms-flex-direction : row;\n            flex-direction : row;\n    width: 100%;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n}\n.triple-video-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    width: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.double-video-small-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n.video-card{\n    position : relative;\n    overflow: hidden;\n}\n.large-video-card{\n    width: 410px;\n    height : 360px;\n    margin: 0 10px;\n}\n.small-video-card{\n    width: 200px;\n    height: 175px;\n    margin-bottom: 10px;\n}\n.video-thumbnail-container img{\n    width : auto;\n    height: 100%;\n}\n.video-thumbnail-container{\n    width: 100%;\n    height: 100%;\n    position: relative;\n}\n.video-thumbnail-container:after{\n    content: '';\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, .5);\n    position :absolute;\n    top: 0;\n    -webkit-transition : .2s opacity;\n    transition : .2s opacity;\n    right: 0;\n}\n.watch-button{\n    border-radius: 20px;\n    height: auto;\n    padding: 2px 25px;\n    text-align: center;\n    background: #f5f6fa;\n    font-family: 'Cairo', sans-serif;        \n    font-weight : bold;\n    border : none;\n    color: #2C3A47;\n    outline: none;\n    cursor: pointer;\n}\n.title-n-button svg{\n    margin : 0 0 0 10px;\n    color: #6D214F;\n}\n.title-n-button{\n    position: absolute;\n    padding: 15px 10px;\n    bottom:0;\n    right:0;\n    left:0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.title-n-button h3{\n    text-align: right;\n    color: #f5f6fa; \n    font-size: 15px;\n}\n.large-video-card .title-n-button h3{\n    font-size: 1.17em;\n}\n.more-vids-btn{\n    background: #55E6C1;\n    color : #2C3A47;\n    margin: 20px auto;\n    padding: 0 50px;\n    cursor: pointer;\n    height:50px;\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 120px;\n    white-space : nowrap;\n}\n.more-vids-btn h2{\n    margin : 0;\n    display: inline-block;\n}\n.videos-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    direction :rtl;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    margin: auto;\n    -ms-flex-wrap : wrap;\n        flex-wrap : wrap;\n    width: 830px;\n}\n@media (max-width : 830px){\n.triple-video-group{\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n}\n.large-video-card{\n        margin: 0;\n        -webkit-box-ordinal-group : 2;\n            -ms-flex-order : 1;\n                order : 1;\n        margin-bottom: 10px;\n}\n.videos-container{\n        width: 410px;\n}\n.double-video-small-group{\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: row;\n                flex-direction: row;\n        -webkit-box-pack: justify;\n            -ms-flex-pack: justify;\n                justify-content: space-between;\n        -webkit-box-ordinal-group : 3;\n            -ms-flex-order : 2;\n                order : 2;\n}\n.bottom-video-card-group{\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n}\n}\n@media (max-width : 430px){\n.videos-container{\n        width: 80%;\n}\n.small-video-card{\n        width : 49%;\n        height:133px;\n        font-size:12px;\n}\n.watch-btn{\n        padding: 2px 10px;\n}\n.title-n-button h3{\n        font-size: 13px;\n}\n.large-video-card{\n        height : 260px;\n        width: 100%;\n}\n}\n\n", ""]);
 
 // exports
 
@@ -49662,6 +49663,193 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 92 */,
+/* 93 */,
+/* 94 */,
+/* 95 */,
+/* 96 */,
+/* 97 */,
+/* 98 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(99)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(102)
+/* template */
+var __vue_template__ = __webpack_require__(101)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\sub-alert.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-95c85270", Component.options)
+  } else {
+    hotAPI.reload("data-v-95c85270", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(100);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("d94055c4", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-95c85270\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./sub-alert.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-95c85270\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./sub-alert.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.sub-alert {\r\n  width: 100%;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  -webkit-box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n          box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n  right: 0;\r\n  height: 180px;\r\n  direction: rtl;\r\n  z-index: 5;\r\n  border: 2px dotted white;\r\n  text-align: center;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#dad4ec), color-stop(1%, #dad4ec), to(#f3e7e9));\r\n  background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);\n}\n.sub-alert button {\r\n  border: none;\r\n  color: white;\r\n  width: 100px;\r\n  font-weight: bold;\r\n  height: 35px;\r\n  border-radius: 30px;\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  text-align: center;\r\n  font-family: \"Cairo\", sans-serif;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#cc208e), to(#6713d2));\r\n  background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);\r\n  margin: 0 20px;\n}\n.sub-alert p {\r\n  font-size: 25px;\n}\n.sub-alert input {\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  border-radius: 30px;\r\n  font-family: \"Cairo\", sans-serif;\r\n  border: none;\r\n  padding: 0 10px;\r\n  width: 300px;\r\n  height: 35px;\r\n  font-size: 15px;\n}\n.close-icon {\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    margin: 10px 15px;\n}\n.bounceUp-enter-active, .bounceUp-leave-active {\r\n  -webkit-transition: bottom .8s, opacity .8s;\r\n  transition: bottom .8s, opacity .8s;\n}\n.bounceUp-enter, .bounceUp-leave-to {\r\n  opacity: 0;\r\n  bottom: -20px;\n}\r\n\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("transition", { attrs: { name: "bounceUp" } }, [
+    _vm.opened
+      ? _c("div", { staticClass: "sub-alert" }, [
+          _c(
+            "div",
+            {
+              staticClass: "close-icon",
+              on: {
+                click: function($event) {
+                  _vm.opened = false
+                }
+              }
+            },
+            [_c("i", { staticClass: "fas fa-times" })]
+          ),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.subscribeMsg))]),
+          _vm._v(" "),
+          _c("form", { attrs: { action: "" } }, [
+            _c("input", {
+              attrs: {
+                type: "email",
+                placeholder: _vm.subscribeEmailPlaceholder
+              }
+            }),
+            _vm._v(" "),
+            _c("button", { attrs: { type: "submit" } }, [
+              _vm._v(_vm._s(_vm.subscribeBtnText))
+            ])
+          ])
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-95c85270", module.exports)
+  }
+}
+
+/***/ }),
+/* 102 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ["subscribeMsg", "subscribeEmailPlaceholder", "subscribeBtnText"],
+    data: function data() {
+        return {
+            opened: false
+        };
+    },
+    created: function created() {
+        var _this = this;
+
+        setTimeout(function () {
+            _this.opened = true;
+        }, '7000');
+    }
+});
 
 /***/ })
 /******/ ]);

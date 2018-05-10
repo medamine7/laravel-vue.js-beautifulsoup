@@ -6,7 +6,7 @@
         "epl" => "Premier League",
         "laliga" => "La Liga",
         "seriea" => "Serie A",
-        "botola" => "Botola Pro",
+        "botola" => "Botola Pro"
     ];
 
 ?>

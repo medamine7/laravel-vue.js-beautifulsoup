@@ -60,15 +60,19 @@ class PagesController extends Controller
 
     public function getArticle($idc,$slug){
 
+        $locale=app()->getLocale();
         $article = Article::where('slug',$slug)->first();
         $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);        
+        $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;                  
         $suggestions = Article::orderBy("created_at","desc")
-        ->where("type","text")
         ->where("slug",'!=',$slug)
+        ->where("type","text")
+        ->where("lang",$locale)
         ->take(4)
         ->get();
         $suggestions->map(function($article,$index){
             $article->category;
+            $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;                  
             $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);
             $article->date = date("d/m/Y", strtotime($article->created_at));
             $article->time = date("H:i", strtotime($article->created_at));
@@ -78,6 +82,30 @@ class PagesController extends Controller
         return view('article',compact("article","suggestions"));
     }
 
+    
+    public function getVideo($idc,$slug){
+
+        $locale=app()->getLocale();
+        $article = Article::where('slug',$slug)->first();
+        $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);        
+        $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;                  
+        $suggestions = Article::orderBy("created_at","desc")
+        ->where("type","video")
+        ->where("slug",'!=',$slug)
+        ->where("lang",$locale)
+        ->take(4)
+        ->get();
+        $suggestions->map(function($article,$index){
+            $article->category;
+            $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;                  
+            $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);
+            $article->date = date("d/m/Y", strtotime($article->created_at));
+            $article->time = date("H:i", strtotime($article->created_at));
+
+        });
+        
+        return view('showroom',compact("article","suggestions"));
+    }
 
     public function getVideosApi($num){
         $videos = Article::orderBy("created_at","desc")

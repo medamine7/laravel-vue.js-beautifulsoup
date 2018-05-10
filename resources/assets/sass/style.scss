@@ -789,3 +789,46 @@ hr{
     }
   }
 }
+
+.sub-alert{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+  right: 0;
+  height: 180px;
+  direction: rtl;
+  z-index: 1;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);  
+
+  button{
+    border: none;
+    color: white;
+    width: 100px;
+    font-weight: bold;
+    height: 35px;
+    border-radius: 30px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: $main_font;
+    background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);
+    margin: 0 20px;
+  }
+  
+
+  p{
+    font-size: 25px;
+  }
+
+  input{
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    border-radius: 30px;
+    font-family: $main_font;
+    border: none;
+    padding: 0 10px;
+    width: 200px;
+    height: 35px;
+  }
+}

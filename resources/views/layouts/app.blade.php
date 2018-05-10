@@ -26,6 +26,7 @@
         <div id="overlay">
             <div class="loader"></div>
         </div>
+        <sub-alert subscribe-email-placeholder=" {{__('sub-alert.subscribe_email_placeholder')}} " subscribe-btn-text=" {{__('sub-alert.subscribe_btn_text')}} " subscribe-msg=" {{__('sub-alert.subscribe_msg')}} "></sub-alert>
         <div class="header">
             <div class="links">
                 <ul>
@@ -40,7 +41,7 @@
             </div>
             <div class="logo-container">
                 <div class="adv-wide"></div>
-                <span class="logo"><a href=""><img src="{{asset('images/logo.png')}}" alt="LOGO"></a></span>
+                <span class="logo"><a href="/"><img src="{{asset('images/logo.png')}}" alt="LOGO"></a></span>
             </div>
             <div class="navbar">
                 <ul>
@@ -51,7 +52,7 @@
                     <a href=""><li>{{__("navbar.matches")}}</li></a>
                 </ul>
                 <div class="mobile-nav-container">
-                    <a href="" class="mobile-logo"><img src="{{asset('images/logo.png')}}" alt="LOGO"></a>
+                    <a href="/" class="mobile-logo"><img src="{{asset('images/logo.png')}}" alt="LOGO"></a>
                     <menu-hamburger></menu-hamburger>
                     <div class="mobile-sidebar">
                         <ul>
@@ -109,7 +110,7 @@
             
             
             $(document).scroll(function(){
-                if($(document).scrollTop()>=165){
+                if($(document).scrollTop()>=170){
                     $('.logo-scrolled').show();
                     $('.navbar').addClass("navbar-scrolled");
                     $('.mobile-sidebar').css("position","fixed");
