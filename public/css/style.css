@@ -154,8 +154,9 @@ li {
 }
 
 .adv-wide {
-  width: 100%;
-  height: auto;
+  width: 830px;
+  margin: auto;
+  height: 120px;
   background: grey;
 }
 

@@ -47791,9 +47791,7 @@ var render = function() {
     _c(
       "a",
       {
-        attrs: {
-          href: "/" + _vm.article.lang + "/article/" + _vm.article.article_id
-        }
+        attrs: { href: "/" + _vm.article.lang + "/article/" + _vm.article.slug }
       },
       [
         _c("div", { staticClass: "card card-large" }, [
@@ -47809,7 +47807,11 @@ var render = function() {
         _c("div", { staticClass: "article-meta" }, [
           _c("p", [
             _c("span", [_vm._v(_vm._s(_vm.article.category.category_name))]),
-            _vm._v(" " + _vm._s(_vm.article.created_at))
+            _vm._v(" "),
+            _c("i", { staticClass: "far fa-calendar-alt" }),
+            _vm._v(_vm._s(_vm.article.date) + " "),
+            _c("i", { staticClass: "far fa-clock" }),
+            _vm._v(" " + _vm._s(_vm.article.time))
           ])
         ])
       ]
@@ -47957,9 +47959,7 @@ var render = function() {
     _c(
       "a",
       {
-        attrs: {
-          href: "/" + _vm.article.lang + "/article/" + _vm.article.article_id
-        }
+        attrs: { href: "/" + _vm.article.lang + "/article/" + _vm.article.slug }
       },
       [
         _c("div", { staticClass: "card card-medium" }, [
@@ -47975,7 +47975,11 @@ var render = function() {
         _c("div", { staticClass: "article-meta" }, [
           _c("p", [
             _c("span", [_vm._v(_vm._s(_vm.article.category.category_name))]),
-            _vm._v(" " + _vm._s(_vm.article.created_at))
+            _vm._v(" "),
+            _c("i", { staticClass: "far fa-calendar-alt" }),
+            _vm._v(_vm._s(_vm.article.date) + " "),
+            _c("i", { staticClass: "far fa-clock" }),
+            _vm._v(" " + _vm._s(_vm.article.time))
           ])
         ])
       ]
@@ -48123,9 +48127,7 @@ var render = function() {
     _c(
       "a",
       {
-        attrs: {
-          href: "/" + _vm.article.lang + "/article/" + _vm.article.article_id
-        }
+        attrs: { href: "/" + _vm.article.lang + "/article/" + _vm.article.slug }
       },
       [
         _c("div", { staticClass: "card card-small" }, [
@@ -48141,7 +48143,11 @@ var render = function() {
         _c("div", { staticClass: "article-meta" }, [
           _c("p", [
             _c("span", [_vm._v(_vm._s(_vm.article.category.category_name))]),
-            _vm._v(" " + _vm._s(_vm.article.created_at))
+            _vm._v(" "),
+            _c("i", { staticClass: "far fa-calendar-alt" }),
+            _vm._v(_vm._s(_vm.article.date) + " "),
+            _c("i", { staticClass: "far fa-clock" }),
+            _vm._v(" " + _vm._s(_vm.article.time))
           ])
         ])
       ]
@@ -48222,7 +48228,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["video"]
+    props: ["video"]
 
 });
 
@@ -49403,7 +49409,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.get("/get_videos/" + Ref.vid_num).then(function (response) {
                 var videos = response.data;
                 videos.forEach(function (element) {
-                    element.image = "/storage/cover_images/" + element.image;
+                    element.image = "/storage/" + element.image;
                 });
                 Ref.videos = videos;
                 Ref.vid_num += 4;
@@ -49423,7 +49429,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         axios.get("/get_videos/13").then(function (response) {
             var videos = response.data;
             videos.forEach(function (element) {
-                element.image = "/storage/cover_images/" + element.image;
+                element.image = "/storage/" + element.image;
             });
             Ref.videos = videos;
         }).catch(function (error) {

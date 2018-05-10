@@ -23,6 +23,12 @@ class Article extends Model
         }
 
         parent::save();
+        
+        $this->slug = str_slug(date('Y-m-d-H-s').'-'.$this->article_id);
+        
+        parent::save();
+
+        
     }
 
     public function authorId()

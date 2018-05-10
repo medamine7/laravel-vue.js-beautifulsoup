@@ -12,9 +12,9 @@
 */
 
 
-Route::get('/leagues', 'PagesController@getLeagues'); 
 Route::get('/leagues/{choice}', 'PagesController@getLeague')->name("league_chosen"); 
 Route::get('/get_videos/{num}', 'PagesController@getVideosApi'); 
+Route::get('/leagues', 'PagesController@getLeagues'); 
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -28,10 +28,9 @@ Route::group(['prefix' => '{lang?}','middleware' => 'localization'],function() {
         return view('videos');
     })->name('videosRoute'); 
     
-    Route::get('article/{anchor}', 'PagesController@getArticle');     
-    Route::get('/', 'PagesController@index')->middleware("TranslateApi"); 
+    Route::get('article/{slug}', 'PagesController@getArticle');     
+    Route::get('/', 'PagesController@index'); 
     
 });
-
 
 

@@ -118,7 +118,7 @@ export default {
             .then(function (response) {
                 var videos=response.data;
                 videos.forEach(function(element) {
-                    element.image="/storage/cover_images/"+element.image;
+                    element.image="/storage/"+element.image;
                 });
                 Ref.videos=videos;
                 Ref.vid_num+=4;
@@ -141,7 +141,7 @@ export default {
         .then(function (response) {
             var videos=response.data;
             videos.forEach(function(element) {
-                element.image="/storage/cover_images/"+element.image;
+                element.image="/storage/"+element.image;
             });
             Ref.videos=videos;
             

@@ -32,7 +32,6 @@
                     <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
                     <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
                     <li><a href=""><i class="fab fa-instagram"></i></a></li>
-                    <li><a href=""><i class="fab fa-linkedin"></i></a></li>
                 </ul>
                 <div class="lang">
                     <a href="/ar"><h5>العربية</h5></a>
@@ -56,7 +55,6 @@
                     <menu-hamburger></menu-hamburger>
                     <div class="mobile-sidebar">
                         <ul>
-                            <a href="/" class="logo-scrolled"><li class="borderless"><img class="notwow" src="{{asset('images/logo.png')}}" alt="LOGO"></li></a>
                             <a href="/"><li>{{__("navbar.home")}}</li></a>
                             <a href="/leagues"><li>{{__("navbar.leagues")}}</li></a>
                             <a href=" {{route('videosRoute')}} "><li>{{__("navbar.videos")}}</li></a>
@@ -111,7 +109,7 @@
             
             
             $(document).scroll(function(){
-                if($(document).scrollTop()>=163){
+                if($(document).scrollTop()>=165){
                     $('.logo-scrolled').show();
                     $('.navbar').addClass("navbar-scrolled");
                     $('.mobile-sidebar').css("position","fixed");

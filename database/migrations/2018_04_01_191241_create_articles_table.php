@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->string('image');
             $table->string('type');
+            $table->string('slug')->unique();
             $table->string('lang');
             $table->integer('admin_id')->unsigned();
             $table->timestamps();

@@ -39,32 +39,42 @@ class PagesController extends Controller
         
         
         
-        
+        $locale=app()->getLocale();
         $articles = Article::orderBy("created_at","desc")
         ->where("type","text")
-        ->where("lang",app()->getLocale())
+        ->where("lang",$locale)
         ->take(22)
         ->get();
-        
         $articles->map(function($article,$index){
             $article->category;
+            $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;      
+            $article->date = date("d/m/Y", strtotime($article->created_at));
+            $article->time = date("H:i", strtotime($article->created_at));
+
+            $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);
         });
         
         $more_articles=$articles->splice(14);
         return view('index', compact('articles','more_articles','pl_rank','seriea_rank','laliga_rank','botola_rank','titles'));
     }
 
-    public function getArticle($idc,$anchor){
+    public function getArticle($idc,$slug){
 
-        $article = Article::where('article_id',$anchor)->first();
+        $article = Article::where('slug',$slug)->first();
+        $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);        
         $suggestions = Article::orderBy("created_at","desc")
         ->where("type","text")
-        ->where("article_id",'!=',$anchor)
+        ->where("slug",'!=',$slug)
         ->take(4)
         ->get();
         $suggestions->map(function($article,$index){
             $article->category;
+            $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);
+            $article->date = date("d/m/Y", strtotime($article->created_at));
+            $article->time = date("H:i", strtotime($article->created_at));
+
         });
+        
         return view('article',compact("article","suggestions"));
     }
 
@@ -74,6 +84,10 @@ class PagesController extends Controller
         ->where("lang",session("locale"))
         ->where("type","video")
         ->take($num)->get();
+        $videos->map(function($video){
+            $video->image=substr($video->image,0,-4)."-cropped".substr($video->image,-4);                
+        });
+
         return response($videos,200)->header('Content-Type', 'text/plain');
     }
 
