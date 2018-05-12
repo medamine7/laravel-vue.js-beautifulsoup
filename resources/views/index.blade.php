@@ -11,7 +11,7 @@
         <carousel @cardclicked="getContent($event)" :articles="{{$articles}}"></carousel>
     </div>
     <div class="videos">
-        <videos :isload="false" route="{{route('videosRoute')}}" indicator="{{__("indicators.videos")}}" watch="{{__("buttons.watch")}}" more="{{__("buttons.more")}}"><videos>
+        <videos category="{{$category}}" :isload="false" route="{{route('videosRoute')}}" indicator="{{__("indicators.videos")}}" watch="{{__("buttons.watch")}}" more="{{__("buttons.more")}}"><videos>
     </div> 
     <div class="leagues-rank-container">
         <div class="indicator"><h1>{{__("indicators.ranking")}}</h1></div>

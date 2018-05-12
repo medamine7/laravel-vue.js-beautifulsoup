@@ -110,11 +110,11 @@
 
 <script>
 export default {
-    props : ["watch","more","load","isload","indicator","route"],
+    props : ["watch","more","load","isload","indicator","route",'category'],
     methods : {
         getMoreVideos(){
             var Ref=this;                    
-            axios.get("/get_videos/"+Ref.vid_num)
+            axios.get("/get_videos/"+this.category+"/"+Ref.vid_num)
             .then(function (response) {
                 var videos=response.data;
                 videos.forEach(function(element) {
@@ -132,12 +132,12 @@ export default {
     data(){
         return{
             videos:'',
-            vid_num: 17
+            vid_num: 17,
         }
     },
     created(){
         var Ref=this;        
-        axios.get("/get_videos/13")
+        axios.get("/get_videos/"+this.category+"/13")
         .then(function (response) {
             var videos=response.data;
             videos.forEach(function(element) {

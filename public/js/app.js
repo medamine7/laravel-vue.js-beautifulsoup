@@ -49403,11 +49403,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["watch", "more", "load", "isload", "indicator", "route"],
+    props: ["watch", "more", "load", "isload", "indicator", "route", 'category'],
     methods: {
         getMoreVideos: function getMoreVideos() {
             var Ref = this;
-            axios.get("/get_videos/" + Ref.vid_num).then(function (response) {
+            axios.get("/get_videos/" + this.category + "/" + Ref.vid_num).then(function (response) {
                 var videos = response.data;
                 videos.forEach(function (element) {
                     element.image = "/storage/" + element.image;
@@ -49427,7 +49427,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     created: function created() {
         var Ref = this;
-        axios.get("/get_videos/13").then(function (response) {
+        axios.get("/get_videos/" + this.category + "/13").then(function (response) {
             var videos = response.data;
             videos.forEach(function (element) {
                 element.image = "/storage/" + element.image;
@@ -49756,7 +49756,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.sub-alert {\r\n  width: 100%;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  -webkit-box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n          box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n  right: 0;\r\n  height: 180px;\r\n  direction: rtl;\r\n  z-index: 5;\r\n  border: 2px dotted white;\r\n  text-align: center;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#dad4ec), color-stop(1%, #dad4ec), to(#f3e7e9));\r\n  background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);\n}\n.sub-alert button {\r\n  border: none;\r\n  color: white;\r\n  width: 100px;\r\n  font-weight: bold;\r\n  height: 35px;\r\n  border-radius: 30px;\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  text-align: center;\r\n  font-family: \"Cairo\", sans-serif;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#cc208e), to(#6713d2));\r\n  background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);\r\n  margin: 0 20px;\n}\n.sub-alert p {\r\n  font-size: 25px;\n}\n.sub-alert input {\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  border-radius: 30px;\r\n  font-family: \"Cairo\", sans-serif;\r\n  border: none;\r\n  padding: 0 10px;\r\n  width: 300px;\r\n  height: 35px;\r\n  font-size: 15px;\n}\n.close-icon {\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    margin: 10px 15px;\n}\n.bounceUp-enter-active, .bounceUp-leave-active {\r\n  -webkit-transition: bottom .8s, opacity .8s;\r\n  transition: bottom .8s, opacity .8s;\n}\n.bounceUp-enter, .bounceUp-leave-to {\r\n  opacity: 0;\r\n  bottom: -20px;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.sub-alert {\r\n  width: 100%;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  -webkit-box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n          box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n  right: 0;\r\n  height: 180px;\r\n  direction: rtl;\r\n  z-index: 5;\r\n  border: 2px dotted white;\r\n  text-align: center;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#dad4ec), color-stop(1%, #dad4ec), to(#f3e7e9));\r\n  background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);\n}\n.sub-alert button {\r\n  border: none;\r\n  color: white;\r\n  width: 100px;\r\n  font-weight: bold;\r\n  cursor: pointer;\r\n  height: 35px;\r\n  border-radius: 30px;\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  text-align: center;\r\n  font-family: \"Cairo\", sans-serif;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#cc208e), to(#6713d2));\r\n  background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);\r\n  margin: 0 20px;\n}\n.sub-alert p {\r\n  font-size: 25px;\n}\n.sub-alert input {\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  border-radius: 30px;\r\n  font-family: \"Cairo\", sans-serif;\r\n  border: none;\r\n  padding: 0 10px;\r\n  width: 300px;\r\n  height: 35px;\r\n  font-size: 15px;\n}\n.close-icon {\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    margin: 10px 15px;\n}\n.bounceUp-enter-active, .bounceUp-leave-active {\r\n  -webkit-transition: bottom .8s, opacity .8s;\r\n  transition: bottom .8s, opacity .8s;\n}\n.bounceUp-enter, .bounceUp-leave-to {\r\n  opacity: 0;\r\n  bottom: -20px;\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -49787,17 +49787,45 @@ var render = function() {
           _vm._v(" "),
           _c("p", [_vm._v(_vm._s(_vm.subscribeMsg))]),
           _vm._v(" "),
-          _c("form", { attrs: { action: "" } }, [
+          _c("div", { staticClass: "sub-alert-form" }, [
             _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email"
+                }
+              ],
               attrs: {
                 type: "email",
                 placeholder: _vm.subscribeEmailPlaceholder
+              },
+              domProps: { value: _vm.email },
+              on: {
+                keyup: function($event) {
+                  if (
+                    !("button" in $event) &&
+                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                  ) {
+                    return null
+                  }
+                  return _vm.sendData($event)
+                },
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
+                }
               }
             }),
             _vm._v(" "),
-            _c("button", { attrs: { type: "submit" } }, [
-              _vm._v(_vm._s(_vm.subscribeBtnText))
-            ])
+            _c(
+              "button",
+              { attrs: { type: "button" }, on: { click: _vm.sendData } },
+              [_vm._v(_vm._s(_vm.subscribeBtnText))]
+            )
           ])
         ])
       : _vm._e()
@@ -49836,17 +49864,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["subscribeMsg", "subscribeEmailPlaceholder", "subscribeBtnText"],
+    props: ["subscribeMsg", "subscribeEmailPlaceholder", "subscribeBtnText", "lang"],
     data: function data() {
         return {
-            opened: false
+            opened: false,
+            email: ''
         };
     },
+
+    methods: {
+        sendData: function sendData() {
+            var _this = this;
+
+            axios.post("/subscribe", {
+                email: this.email,
+                lang: this.lang
+            }).then(function (response) {
+                _this.opened = false;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    },
     created: function created() {
-        var _this = this;
+        var _this2 = this;
 
         setTimeout(function () {
-            _this.opened = true;
+            _this2.opened = true;
         }, '7000');
     }
 });

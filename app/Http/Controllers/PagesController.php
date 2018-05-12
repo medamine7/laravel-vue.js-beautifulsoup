@@ -55,7 +55,7 @@ class PagesController extends Controller
         });
         
         $more_articles=$articles->splice(14);
-        return view('index', compact('articles','more_articles','pl_rank','seriea_rank','laliga_rank','botola_rank','titles'));
+        return view('index', compact('articles','more_articles','pl_rank','seriea_rank','laliga_rank','botola_rank','titles'))->with("category",'all');
     }
 
     public function getArticle($idc,$slug){
@@ -107,11 +107,21 @@ class PagesController extends Controller
         return view('showroom',compact("article","suggestions"));
     }
 
-    public function getVideosApi($num){
-        $videos = Article::orderBy("created_at","desc")
-        ->where("lang",session("locale"))
-        ->where("type","video")
-        ->take($num)->get();
+    public function getVideosApi($choice,$num){
+        if($choice=="all"){
+            $videos = Article::orderBy("created_at","desc")
+            ->where("lang",session("locale"))
+            ->where("type","video")
+            ->take($num)->get();
+        }else{
+            $videos = Article::orderBy("created_at","desc")
+            ->where("lang",session("locale"))
+            ->where("type","video")
+            ->whereHas('category', function ($query) use ($choice) {
+            $query->where('category_name_'.app()->getLocale(), '=', $choice);
+            })->take($num)
+            ->get();
+        }
         $videos->map(function($video){
             $video->image=substr($video->image,0,-4)."-cropped".substr($video->image,-4);                
         });
@@ -122,17 +132,35 @@ class PagesController extends Controller
 
     public function getLeagues(){
         $leagues=Article_categorie::all();
-        
+        if (app()->getLocale()=='ar'){
+            $leagues->map(function($league){
+                $league->category_name=$league->category_name_ar;
+            });
+        }else{
+            $leagues->map(function($league){
+                $league->category_name=$league->category_name_en;
+            });
+        }
+
         return view("leagues")->with("leagues",$leagues);
     }
 
-    public function getLeague($choice){
-        $articles = Article::whereHas('category', function ($query) use ($choice) {
-        $query->where('category_name', '=', $choice);
+    public function getLeague($locale,$choice){
+        $articles = Article::orderBy("created_at","desc")
+        ->where("type","text")
+        ->where("lang",$locale)
+        ->take(22)
+        ->whereHas('category', function ($query) use ($locale,$choice) {
+        $query->where("category_name_".$locale, $choice);
         })->get();
 
         $articles->map(function($article,$index){
             $article->category;
+            $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;      
+            $article->date = date("d/m/Y", strtotime($article->created_at));
+            $article->time = date("H:i", strtotime($article->created_at));
+
+            $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);
         });
 
         // $rank_script ='"'.storage_path("app/scripts/scrapScriptRank.py").'"';        
@@ -155,7 +183,7 @@ class PagesController extends Controller
         
         
         $more_articles=$articles->splice(14);
-        return view('index', compact('articles','more_articles','pl_rank','seriea_rank','laliga_rank','botola_rank','titles'));
+        return view('index', compact('articles','more_articles','pl_rank','seriea_rank','laliga_rank','botola_rank','titles'))->with('category',$choice);
     }
 
 }

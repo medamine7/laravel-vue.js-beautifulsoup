@@ -5,27 +5,42 @@
                 <i class="fas fa-times"></i>            
             </div>
             <p>{{subscribeMsg}}</p>
-            <form action="">
-                <input type="email" :placeholder="subscribeEmailPlaceholder">
-                <button type="submit">{{subscribeBtnText}}</button>
-            </form>
+            <div class="sub-alert-form">
+                <input @keyup.enter="sendData" v-model="email" type="email" :placeholder="subscribeEmailPlaceholder">
+                <button @click="sendData" type="button">{{subscribeBtnText}}</button>
+            </div>
         </div>
     </transition>
 </template>
 
 <script>
 export default {
-  props : ["subscribeMsg","subscribeEmailPlaceholder","subscribeBtnText"],
+  props : ["subscribeMsg","subscribeEmailPlaceholder","subscribeBtnText","lang"],
   data(){
       return {
-          opened : false
+          opened : false,
+          email:'',
       }
   },
-
+  methods : {
+      sendData(){
+          axios.post("/subscribe",{
+              email : this.email,
+              lang : this.lang
+          })
+            .then((response) => {
+                this.opened=false;           
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+      }
+  },
   created(){
-      setTimeout(() => {
-          this.opened=true;
-      }, '7000');
+      
+        setTimeout(() => {
+            this.opened=true;
+        }, '7000');
   }
 }
 </script>
@@ -57,6 +72,7 @@ export default {
   color: white;
   width: 100px;
   font-weight: bold;
+  cursor: pointer;
   height: 35px;
   border-radius: 30px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);

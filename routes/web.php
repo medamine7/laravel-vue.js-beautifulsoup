@@ -12,15 +12,15 @@
 */
 
 
-Route::get('/leagues/{choice}', 'PagesController@getLeague')->name("league_chosen"); 
-Route::get('/get_videos/{num}', 'PagesController@getVideosApi'); 
-Route::get('/leagues', 'PagesController@getLeagues'); 
+Route::get('/get_videos/{choice}/{num}', 'PagesController@getVideosApi'); 
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+
+Route::post("subscribe","SubscriptionController@subscribed");
 
 Route::group(['prefix' => '{lang?}','middleware' => 'localization'],function() {
     
@@ -33,6 +33,8 @@ Route::group(['prefix' => '{lang?}','middleware' => 'localization'],function() {
         return view('showroom');
     });     
     Route::get('/', 'PagesController@index'); 
+    Route::get('/leagues', 'PagesController@getLeagues'); 
+    Route::get('/leagues/{choice}', 'PagesController@getLeague')->name("league_chosen"); 
     
 });
 
