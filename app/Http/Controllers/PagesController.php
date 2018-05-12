@@ -108,17 +108,18 @@ class PagesController extends Controller
     }
 
     public function getVideosApi($choice,$num){
+        $locale=session("locale");
         if($choice=="all"){
             $videos = Article::orderBy("created_at","desc")
-            ->where("lang",session("locale"))
+            ->where("lang",$locale)
             ->where("type","video")
             ->take($num)->get();
         }else{
             $videos = Article::orderBy("created_at","desc")
             ->where("lang",session("locale"))
             ->where("type","video")
-            ->whereHas('category', function ($query) use ($choice) {
-            $query->where('category_name_'.app()->getLocale(), '=', $choice);
+            ->whereHas('category', function ($query) use ($locale,$choice) {
+            $query->where('category_name_'.$locale, $choice);
             })->take($num)
             ->get();
         }

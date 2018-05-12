@@ -59,6 +59,7 @@ export default {
   left: 0;
   box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);
   right: 0;
+  padding: 10px 0;
   height: 180px;
   direction: rtl;
   z-index: 5;
@@ -79,7 +80,7 @@ export default {
   text-align: center;
   font-family: "Cairo", sans-serif;
   background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);
-  margin: 0 20px;
+  margin: 5px 20px;
 }
 
 .sub-alert p {
@@ -94,6 +95,7 @@ export default {
   padding: 0 10px;
   width: 300px;
   height: 35px;
+  margin : 5px 0;
   font-size: 15px;
 }
 
@@ -115,4 +117,11 @@ export default {
   bottom: -20px;
 }
 
+.sub-alert-form {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: auto;
+}
 </style>
