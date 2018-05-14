@@ -19,7 +19,7 @@
         <div id="overlay">
             <div class="loader"></div>
         </div>
-        <sub-alert lang=" {{app()->getLocale()}} " subscribe-email-placeholder=" {{__('sub-alert.subscribe_email_placeholder')}} " subscribe-btn-text=" {{__('sub-alert.subscribe_btn_text')}} " subscribe-msg=" {{__('sub-alert.subscribe_msg')}} "></sub-alert>
+        <sub-alert invalid-email="{{__('sub-alert.invalid_email')}}" lang=" {{app()->getLocale()}} " subscribe-email-placeholder=" {{__('sub-alert.subscribe_email_placeholder')}} " subscribe-btn-text=" {{__('sub-alert.subscribe_btn_text')}} " subscribe-msg=" {{__('sub-alert.subscribe_msg')}} "></sub-alert>
         <div class="header">
             <div class="links">
                 <ul>

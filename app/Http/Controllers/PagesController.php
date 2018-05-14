@@ -86,25 +86,25 @@ class PagesController extends Controller
     public function getVideo($idc,$slug){
 
         $locale=app()->getLocale();
-        $article = Article::where('slug',$slug)->first();
-        $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);        
-        $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;                  
+        $video = Article::where('slug',$slug)->first();
+        $video->image=substr($video->image,0,-4)."-cropped".substr($video->image,-4);        
+        $video->category->category_name=(app()->getLocale()=='ar') ? $video->category->category_name_ar : $video->category->category_name_en;                  
         $suggestions = Article::orderBy("created_at","desc")
         ->where("type","video")
         ->where("slug",'!=',$slug)
         ->where("lang",$locale)
         ->take(4)
         ->get();
-        $suggestions->map(function($article,$index){
-            $article->category;
-            $article->category->category_name=(app()->getLocale()=='ar') ? $article->category->category_name_ar : $article->category->category_name_en;                  
-            $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);
-            $article->date = date("d/m/Y", strtotime($article->created_at));
-            $article->time = date("H:i", strtotime($article->created_at));
+        $suggestions->map(function($video,$index){
+            $video->category;
+            $video->category->category_name=(app()->getLocale()=='ar') ? $video->category->category_name_ar : $video->category->category_name_en;                  
+            $video->image=substr($video->image,0,-4)."-cropped".substr($video->image,-4);
+            $video->date = date("d/m/Y", strtotime($video->created_at));
+            $video->time = date("H:i", strtotime($video->created_at));
 
         });
         
-        return view('showroom',compact("article","suggestions"));
+        return view('showroom',compact("video","suggestions"));
     }
 
     public function getVideosApi($choice,$num){

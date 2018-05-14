@@ -29,9 +29,7 @@ Route::group(['prefix' => '{lang?}','middleware' => 'localization'],function() {
     })->name('videosRoute'); 
     
     Route::get('article/{slug}', 'PagesController@getArticle');     
-    Route::get('video/{slug}', function(){
-        return view('showroom');
-    });     
+    Route::get('video/{slug}', 'PagesController@getVideo');     
     Route::get('/', 'PagesController@index'); 
     Route::get('/leagues', 'PagesController@getLeagues'); 
     Route::get('leagues/{choice}', 'PagesController@getLeague')->name("league_chosen"); 

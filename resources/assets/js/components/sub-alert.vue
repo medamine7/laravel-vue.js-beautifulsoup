@@ -6,7 +6,10 @@
             </div>
             <p>{{subscribeMsg}}</p>
             <div class="sub-alert-form">
-                <input @keyup.enter="sendData" v-model="email" type="email" :placeholder="subscribeEmailPlaceholder">
+                <div class="sub-alert-input">
+                    <input @keyup.enter="sendData" v-model="email" type="email" :placeholder="subscribeEmailPlaceholder">
+                    <p v-show="error">{{error}}</p>
+                </div>
                 <button @click="sendData" type="button">{{subscribeBtnText}}</button>
             </div>
         </div>
@@ -15,15 +18,25 @@
 
 <script>
 export default {
-  props : ["subscribeMsg","subscribeEmailPlaceholder","subscribeBtnText","lang"],
+  props : ["subscribeMsg","subscribeEmailPlaceholder","subscribeBtnText","lang","invalidEmail"],
   data(){
       return {
           opened : false,
           email:'',
+          error : ''
       }
   },
   methods : {
+      validEmail:function(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+      },
       sendData(){
+          if (!this.validEmail(this.email)) {
+              this.error=this.invalidEmail;
+              return false;
+          }
+
           axios.post("/subscribe",{
               email : this.email,
               lang : this.lang
@@ -59,8 +72,8 @@ export default {
   left: 0;
   box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);
   right: 0;
-  padding: 10px 0;
-  height: 180px;
+  padding: 10px 0 50px;
+  height: auto;
   direction: rtl;
   z-index: 5;
   border: 2px dotted white;
@@ -80,11 +93,12 @@ export default {
   text-align: center;
   font-family: "Cairo", sans-serif;
   background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);
-  margin: 5px 20px;
+  margin: 30px 20px 5px;
 }
 
 .sub-alert p {
   font-size: 25px;
+  margin-bottom: 0;
 }
 
 .sub-alert input {
@@ -95,7 +109,7 @@ export default {
   padding: 0 10px;
   width: 300px;
   height: 35px;
-  margin : 5px 0;
+  margin : 30px 0 5px;
   font-size: 15px;
 }
 
@@ -123,5 +137,25 @@ export default {
     flex-wrap: wrap;
     max-width: 500px;
     margin: auto;
+}
+
+.sub-alert-input{
+    position:relative;
+}
+
+.sub-alert-input p{
+    font-size: 14px;
+    margin : 0;
+    opacity: 0;
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    color : #d44a4a;
+    animation: slide_down_error .5s forwards;
+}
+
+@keyframes slide_down_error{
+    form{bottom:-15px;opacity: 0}
+    to{bottom:-25px;opacity: 1}
 }
 </style>

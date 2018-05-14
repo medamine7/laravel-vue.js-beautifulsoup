@@ -49280,7 +49280,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.bottom-video-card-group{\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-orient : horizontal;\n    -webkit-box-direction : normal;\n        -ms-flex-direction : row;\n            flex-direction : row;\n    width: 100%;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n}\n.triple-video-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    width: 100%;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n}\n.double-video-small-group{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n}\n.video-card{\n    position : relative;\n    overflow: hidden;\n}\n.large-video-card{\n    width: 410px;\n    height : 360px;\n    margin: 0 10px;\n}\n.small-video-card{\n    width: 200px;\n    height: 175px;\n    margin-bottom: 10px;\n}\n.video-thumbnail-container img{\n    width : auto;\n    height: 100%;\n}\n.video-thumbnail-container{\n    width: 100%;\n    height: 100%;\n    position: relative;\n}\n.video-thumbnail-container:after{\n    content: '';\n    width: 100%;\n    height: 100%;\n    background: rgba(0, 0, 0, .5);\n    position :absolute;\n    top: 0;\n    -webkit-transition : .2s opacity;\n    transition : .2s opacity;\n    right: 0;\n}\n.watch-button{\n    border-radius: 20px;\n    height: auto;\n    padding: 2px 25px;\n    text-align: center;\n    background: #f5f6fa;\n    font-family: 'Cairo', sans-serif;        \n    font-weight : bold;\n    border : none;\n    color: #2C3A47;\n    outline: none;\n    cursor: pointer;\n}\n.title-n-button svg{\n    margin : 0 0 0 10px;\n    color: #6D214F;\n}\n.title-n-button{\n    position: absolute;\n    padding: 15px 10px;\n    bottom:0;\n    right:0;\n    left:0;\n    -webkit-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.title-n-button h3{\n    text-align: right;\n    color: #f5f6fa; \n    font-size: 15px;\n}\n.large-video-card .title-n-button h3{\n    font-size: 1.17em;\n}\n.more-vids-btn{\n    background: #55E6C1;\n    color : #2C3A47;\n    margin: 20px auto;\n    padding: 0 50px;\n    cursor: pointer;\n    height:50px;\n    display : -webkit-box;\n    display : -ms-flexbox;\n    display : flex;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 120px;\n    white-space : nowrap;\n}\n.more-vids-btn h2{\n    margin : 0;\n    display: inline-block;\n}\n.videos-container{\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: justify;\n        -ms-flex-pack: justify;\n            justify-content: space-between;\n    direction :rtl;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    margin: auto;\n    -ms-flex-wrap : wrap;\n        flex-wrap : wrap;\n    width: 830px;\n}\n@media (max-width : 830px){\n.triple-video-group{\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: column;\n                flex-direction: column;\n}\n.large-video-card{\n        margin: 0;\n        -webkit-box-ordinal-group : 2;\n            -ms-flex-order : 1;\n                order : 1;\n        margin-bottom: 10px;\n}\n.videos-container{\n        width: 410px;\n}\n.double-video-small-group{\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n            -ms-flex-direction: row;\n                flex-direction: row;\n        -webkit-box-pack: justify;\n            -ms-flex-pack: justify;\n                justify-content: space-between;\n        -webkit-box-ordinal-group : 3;\n            -ms-flex-order : 2;\n                order : 2;\n}\n.bottom-video-card-group{\n        -ms-flex-wrap: wrap;\n            flex-wrap: wrap;\n}\n}\n@media (max-width : 430px){\n.videos-container{\n        width: 80%;\n}\n.small-video-card{\n        width : 49%;\n        height:133px;\n        font-size:12px;\n}\n.watch-btn{\n        padding: 2px 10px;\n}\n.title-n-button h3{\n        font-size: 13px;\n}\n.large-video-card{\n        height : 260px;\n        width: 100%;\n}\n}\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/*\r\n    .bottom-video-card-group{\r\n        display : flex;\r\n        flex-direction : row;\r\n        width: 100%;\r\n        justify-content: space-between;\r\n    }\r\n\r\n    .triple-video-group{\r\n        display: flex;\r\n        flex-direction: row;\r\n        width: 100%;\r\n        justify-content: center;\r\n    }\r\n\r\n    .double-video-small-group{\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    .video-card{\r\n        position : relative;\r\n        overflow: hidden;\r\n    }\r\n\r\n    .large-video-card{\r\n        width: 410px;\r\n        height : 360px;\r\n        margin: 0 10px;\r\n        \r\n    }\r\n\r\n    .small-video-card{\r\n        width: 200px;\r\n        height: 175px;\r\n        margin-bottom: 10px;\r\n    }\r\n\r\n    .video-thumbnail-container img{\r\n        width : auto;\r\n        height: 100%;\r\n    }\r\n\r\n    .video-thumbnail-container{\r\n        width: 100%;\r\n        height: 100%;\r\n        position: relative;\r\n    }\r\n\r\n    .video-thumbnail-container:after{\r\n        content: '';\r\n        width: 100%;\r\n        height: 100%;\r\n        background: rgba(0, 0, 0, .5);\r\n        position :absolute;\r\n        top: 0;\r\n        transition : .2s opacity;\r\n        right: 0;\r\n    }\r\n\r\n    .watch-button{\r\n        border-radius: 20px;\r\n        height: auto;\r\n        padding: 2px 25px;\r\n        text-align: center;\r\n        background: #f5f6fa;\r\n        font-family: 'Cairo', sans-serif;        \r\n        font-weight : bold;\r\n        font-size:14px;\r\n        border : none;\r\n        color: #2C3A47;\r\n        outline: none;\r\n        cursor: pointer;\r\n    }\r\n\r\n    .title-n-button svg{\r\n        margin : 0 0 0 10px;\r\n        color: #6D214F;\r\n    }\r\n\r\n    \r\n    .title-n-button{\r\n        position: absolute;\r\n        padding: 15px 10px;\r\n        bottom:0;\r\n        right:0;\r\n        left:0;\r\n        box-sizing: border-box;\r\n    }\r\n\r\n    .title-n-button h3{\r\n        text-align: right;\r\n        color: #f5f6fa; \r\n        font-size: 15px;       \r\n    }\r\n    \r\n    \r\n\r\n    .large-video-card .title-n-button h3{\r\n        font-size: 1.17em;\r\n        \r\n    }\r\n    \r\n    .more-vids-btn{\r\n        background: #55E6C1;\r\n        color : #2C3A47;\r\n        margin: 20px auto;\r\n        padding: 0 50px;\r\n        cursor: pointer;\r\n        height:50px;\r\n        display : flex;\r\n        justify-content: center;\r\n        width: 120px;\r\n        white-space : nowrap;\r\n    }\r\n\r\n    .more-vids-btn h2{\r\n        margin : 0;\r\n        display: inline-block;\r\n    }\r\n\r\n    .videos-container{\r\n        display: flex;\r\n        justify-content: space-between;\r\n        direction :rtl;\r\n        flex-direction: row;\r\n        margin: auto;\r\n        flex-wrap : wrap;\r\n        width: 830px;\r\n    }\r\n\r\n    @media (max-width : 830px){\r\n        .triple-video-group{\r\n            flex-direction: column;\r\n        }\r\n\r\n        .large-video-card{\r\n            margin: 0;\r\n            order : 1;\r\n            margin-bottom: 10px;\r\n            \r\n        }\r\n        \r\n        .videos-container{\r\n            width: 410px;\r\n        }\r\n\r\n        .double-video-small-group{\r\n            flex-direction: row;\r\n            justify-content: space-between;\r\n            order : 2;\r\n        }\r\n\r\n        .bottom-video-card-group{\r\n            flex-wrap: wrap;\r\n        }\r\n    }\r\n\r\n    @media (max-width : 430px){\r\n        .videos-container{\r\n            width: 80%;\r\n        }\r\n\r\n        .small-video-card{\r\n            width : 49%;\r\n            height:133px;\r\n            font-size:12px;\r\n        }\r\n\r\n        .watch-btn{\r\n            padding: 2px 10px;\r\n        }\r\n\r\n\r\n        .title-n-button h3{\r\n            font-size: 13px;       \r\n        }\r\n\r\n\r\n        .large-video-card{\r\n            height : 260px;\r\n            width: 100%;\r\n        }\r\n    }\r\n*/\r\n", ""]);
 
 // exports
 
@@ -49467,10 +49467,23 @@ var render = function() {
                   _c("div", { staticClass: "title-n-button" }, [
                     _c("h3", [_vm._v(_vm._s(_vm.videos[1].heading))]),
                     _vm._v(" "),
-                    _c("button", { staticClass: "watch-button" }, [
-                      _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
-                    ])
+                    _c(
+                      "a",
+                      {
+                        staticClass: "watch-button",
+                        attrs: {
+                          href:
+                            "/" +
+                            _vm.videos[1].lang +
+                            "/video/" +
+                            _vm.videos[1].slug
+                        }
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-play-circle" }),
+                        _vm._v(_vm._s(_vm.watch))
+                      ]
+                    )
                   ])
                 ]),
                 _vm._v(" "),
@@ -49482,10 +49495,23 @@ var render = function() {
                   _c("div", { staticClass: "title-n-button" }, [
                     _c("h3", [_vm._v(_vm._s(_vm.videos[2].heading))]),
                     _vm._v(" "),
-                    _c("button", { staticClass: "watch-button" }, [
-                      _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
-                    ])
+                    _c(
+                      "a",
+                      {
+                        staticClass: "watch-button",
+                        attrs: {
+                          href:
+                            "/" +
+                            _vm.videos[2].lang +
+                            "/video/" +
+                            _vm.videos[2].slug
+                        }
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-play-circle" }),
+                        _vm._v(_vm._s(_vm.watch))
+                      ]
+                    )
                   ])
                 ])
               ]),
@@ -49498,10 +49524,23 @@ var render = function() {
                 _c("div", { staticClass: "title-n-button" }, [
                   _c("h3", [_vm._v(" " + _vm._s(_vm.videos[0].heading) + " ")]),
                   _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
+                  _c(
+                    "a",
+                    {
+                      staticClass: "watch-button",
+                      attrs: {
+                        href:
+                          "/" +
+                          _vm.videos[0].lang +
+                          "/video/" +
+                          _vm.videos[0].slug
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ]
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -49514,10 +49553,23 @@ var render = function() {
                   _c("div", { staticClass: "title-n-button" }, [
                     _c("h3", [_vm._v(_vm._s(_vm.videos[3].heading))]),
                     _vm._v(" "),
-                    _c("button", { staticClass: "watch-button" }, [
-                      _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
-                    ])
+                    _c(
+                      "a",
+                      {
+                        staticClass: "watch-button",
+                        attrs: {
+                          href:
+                            "/" +
+                            _vm.videos[3].lang +
+                            "/video/" +
+                            _vm.videos[3].slug
+                        }
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-play-circle" }),
+                        _vm._v(_vm._s(_vm.watch))
+                      ]
+                    )
                   ])
                 ]),
                 _vm._v(" "),
@@ -49529,10 +49581,23 @@ var render = function() {
                   _c("div", { staticClass: "title-n-button" }, [
                     _c("h3", [_vm._v(_vm._s(_vm.videos[4].heading))]),
                     _vm._v(" "),
-                    _c("button", { staticClass: "watch-button" }, [
-                      _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
-                    ])
+                    _c(
+                      "a",
+                      {
+                        staticClass: "watch-button",
+                        attrs: {
+                          href:
+                            "/" +
+                            _vm.videos[4].lang +
+                            "/video/" +
+                            _vm.videos[4].slug
+                        }
+                      },
+                      [
+                        _c("i", { staticClass: "fas fa-play-circle" }),
+                        _vm._v(_vm._s(_vm.watch))
+                      ]
+                    )
                   ])
                 ])
               ])
@@ -49547,10 +49612,23 @@ var render = function() {
                 _c("div", { staticClass: "title-n-button" }, [
                   _c("h3", [_vm._v(_vm._s(_vm.videos[5].heading))]),
                   _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
+                  _c(
+                    "a",
+                    {
+                      staticClass: "watch-button",
+                      attrs: {
+                        href:
+                          "/" +
+                          _vm.videos[5].lang +
+                          "/video/" +
+                          _vm.videos[5].slug
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ]
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -49562,10 +49640,23 @@ var render = function() {
                 _c("div", { staticClass: "title-n-button" }, [
                   _c("h3", [_vm._v(_vm._s(_vm.videos[6].heading))]),
                   _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
+                  _c(
+                    "a",
+                    {
+                      staticClass: "watch-button",
+                      attrs: {
+                        href:
+                          "/" +
+                          _vm.videos[6].lang +
+                          "/video/" +
+                          _vm.videos[6].slug
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ]
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -49577,10 +49668,23 @@ var render = function() {
                 _c("div", { staticClass: "title-n-button" }, [
                   _c("h3", [_vm._v(_vm._s(_vm.videos[7].heading))]),
                   _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
+                  _c(
+                    "a",
+                    {
+                      staticClass: "watch-button",
+                      attrs: {
+                        href:
+                          "/" +
+                          _vm.videos[7].lang +
+                          "/video/" +
+                          _vm.videos[7].slug
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ]
+                  )
                 ])
               ]),
               _vm._v(" "),
@@ -49592,10 +49696,23 @@ var render = function() {
                 _c("div", { staticClass: "title-n-button" }, [
                   _c("h3", [_vm._v(_vm._s(_vm.videos[8].heading))]),
                   _vm._v(" "),
-                  _c("button", { staticClass: "watch-button" }, [
-                    _c("i", { staticClass: "fas fa-play-circle" }),
-                    _vm._v(_vm._s(_vm.watch))
-                  ])
+                  _c(
+                    "a",
+                    {
+                      staticClass: "watch-button",
+                      attrs: {
+                        href:
+                          "/" +
+                          _vm.videos[8].lang +
+                          "/video/" +
+                          _vm.videos[8].slug
+                      }
+                    },
+                    [
+                      _c("i", { staticClass: "fas fa-play-circle" }),
+                      _vm._v(_vm._s(_vm.watch))
+                    ]
+                  )
                 ])
               ])
             ]),
@@ -49613,10 +49730,19 @@ var render = function() {
                       _c("div", { staticClass: "title-n-button" }, [
                         _c("h3", [_vm._v(_vm._s(video.heading))]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "watch-button" }, [
-                          _c("i", { staticClass: "fas fa-play-circle" }),
-                          _vm._v(_vm._s(_vm.watch))
-                        ])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "watch-button",
+                            attrs: {
+                              href: "/" + video.lang + "/video/" + video.slug
+                            }
+                          },
+                          [
+                            _c("i", { staticClass: "fas fa-play-circle" }),
+                            _vm._v(_vm._s(_vm.watch))
+                          ]
+                        )
                       ])
                     ]
                   )
@@ -49756,7 +49882,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.sub-alert {\r\n  width: 100%;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  -webkit-box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n          box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n  right: 0;\r\n  padding: 10px 0;\r\n  height: 180px;\r\n  direction: rtl;\r\n  z-index: 5;\r\n  border: 2px dotted white;\r\n  text-align: center;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#dad4ec), color-stop(1%, #dad4ec), to(#f3e7e9));\r\n  background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);\n}\n.sub-alert button {\r\n  border: none;\r\n  color: white;\r\n  width: 100px;\r\n  font-weight: bold;\r\n  cursor: pointer;\r\n  height: 35px;\r\n  border-radius: 30px;\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  text-align: center;\r\n  font-family: \"Cairo\", sans-serif;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#cc208e), to(#6713d2));\r\n  background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);\r\n  margin: 5px 20px;\n}\n.sub-alert p {\r\n  font-size: 25px;\n}\n.sub-alert input {\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  border-radius: 30px;\r\n  font-family: \"Cairo\", sans-serif;\r\n  border: none;\r\n  padding: 0 10px;\r\n  width: 300px;\r\n  height: 35px;\r\n  margin : 5px 0;\r\n  font-size: 15px;\n}\n.close-icon {\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    margin: 10px 15px;\n}\n.bounceUp-enter-active, .bounceUp-leave-active {\r\n  -webkit-transition: bottom .8s, opacity .8s;\r\n  transition: bottom .8s, opacity .8s;\n}\n.bounceUp-enter, .bounceUp-leave-to {\r\n  opacity: 0;\r\n  bottom: -20px;\n}\n.sub-alert-form {\r\n    -ms-flex-pack: distribute;\r\n        justify-content: space-around;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    max-width: 500px;\r\n    margin: auto;\n}\r\n", ""]);
+exports.push([module.i, "\n.sub-alert {\r\n  width: 100%;\r\n  position: fixed;\r\n  bottom: 0;\r\n  left: 0;\r\n  -webkit-box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n          box-shadow: 10px 0 80px rgba(0, 0, 0, 0.4);\r\n  right: 0;\r\n  padding: 10px 0 50px;\r\n  height: auto;\r\n  direction: rtl;\r\n  z-index: 5;\r\n  border: 2px dotted white;\r\n  text-align: center;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#dad4ec), color-stop(1%, #dad4ec), to(#f3e7e9));\r\n  background-image: linear-gradient(to right, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);\n}\n.sub-alert button {\r\n  border: none;\r\n  color: white;\r\n  width: 100px;\r\n  font-weight: bold;\r\n  cursor: pointer;\r\n  height: 35px;\r\n  border-radius: 30px;\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  text-align: center;\r\n  font-family: \"Cairo\", sans-serif;\r\n  background-image: -webkit-gradient(linear, left top, right top, from(#cc208e), to(#6713d2));\r\n  background-image: linear-gradient(to right, #cc208e 0%, #6713d2 100%);\r\n  margin: 30px 20px 5px;\n}\n.sub-alert p {\r\n  font-size: 25px;\r\n  margin-bottom: 0;\n}\n.sub-alert input {\r\n  -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n          box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);\r\n  border-radius: 30px;\r\n  font-family: \"Cairo\", sans-serif;\r\n  border: none;\r\n  padding: 0 10px;\r\n  width: 300px;\r\n  height: 35px;\r\n  margin : 30px 0 5px;\r\n  font-size: 15px;\n}\n.close-icon {\r\n    font-size: 20px;\r\n    cursor: pointer;\r\n    position: absolute;\r\n    right: 0;\r\n    top: 0;\r\n    margin: 10px 15px;\n}\n.bounceUp-enter-active, .bounceUp-leave-active {\r\n  -webkit-transition: bottom .8s, opacity .8s;\r\n  transition: bottom .8s, opacity .8s;\n}\n.bounceUp-enter, .bounceUp-leave-to {\r\n  opacity: 0;\r\n  bottom: -20px;\n}\n.sub-alert-form {\r\n    -ms-flex-pack: distribute;\r\n        justify-content: space-around;\r\n    display: -webkit-box;\r\n    display: -ms-flexbox;\r\n    display: flex;\r\n    -ms-flex-wrap: wrap;\r\n        flex-wrap: wrap;\r\n    max-width: 500px;\r\n    margin: auto;\n}\n.sub-alert-input{\r\n    position:relative;\n}\n.sub-alert-input p{\r\n    font-size: 14px;\r\n    margin : 0;\r\n    opacity: 0;\r\n    position: absolute;\r\n    bottom: -15px;\r\n    width: 100%;\r\n    color : #d44a4a;\r\n    -webkit-animation: slide_down_error .5s forwards;\r\n            animation: slide_down_error .5s forwards;\n}\n@-webkit-keyframes slide_down_error{\nform{bottom:-15px;opacity: 0\n}\nto{bottom:-25px;opacity: 1\n}\n}\n@keyframes slide_down_error{\nform{bottom:-15px;opacity: 0\n}\nto{bottom:-25px;opacity: 1\n}\n}\r\n", ""]);
 
 // exports
 
@@ -49788,38 +49914,55 @@ var render = function() {
           _c("p", [_vm._v(_vm._s(_vm.subscribeMsg))]),
           _vm._v(" "),
           _c("div", { staticClass: "sub-alert-form" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.email,
-                  expression: "email"
-                }
-              ],
-              attrs: {
-                type: "email",
-                placeholder: _vm.subscribeEmailPlaceholder
-              },
-              domProps: { value: _vm.email },
-              on: {
-                keyup: function($event) {
-                  if (
-                    !("button" in $event) &&
-                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                  ) {
-                    return null
+            _c("div", { staticClass: "sub-alert-input" }, [
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.email,
+                    expression: "email"
                   }
-                  return _vm.sendData($event)
+                ],
+                attrs: {
+                  type: "email",
+                  placeholder: _vm.subscribeEmailPlaceholder
                 },
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+                domProps: { value: _vm.email },
+                on: {
+                  keyup: function($event) {
+                    if (
+                      !("button" in $event) &&
+                      _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                    ) {
+                      return null
+                    }
+                    return _vm.sendData($event)
+                  },
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.email = $event.target.value
                   }
-                  _vm.email = $event.target.value
                 }
-              }
-            }),
+              }),
+              _vm._v(" "),
+              _c(
+                "p",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.error,
+                      expression: "error"
+                    }
+                  ]
+                },
+                [_vm._v(_vm._s(_vm.error))]
+              )
+            ]),
             _vm._v(" "),
             _c(
               "button",
@@ -49862,19 +50005,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["subscribeMsg", "subscribeEmailPlaceholder", "subscribeBtnText", "lang"],
+    props: ["subscribeMsg", "subscribeEmailPlaceholder", "subscribeBtnText", "lang", "invalidEmail"],
     data: function data() {
         return {
             opened: false,
-            email: ''
+            email: '',
+            error: ''
         };
     },
 
     methods: {
+        validEmail: function validEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        },
         sendData: function sendData() {
             var _this = this;
+
+            if (!this.validEmail(this.email)) {
+                this.error = this.invalidEmail;
+                return false;
+            }
 
             axios.post("/subscribe", {
                 email: this.email,

@@ -10,7 +10,7 @@
                         </div>
                         <div class="title-n-button">
                             <h3>{{videos[1].heading}}</h3>
-                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                            <a class="watch-button" :href="'/'+videos[1].lang+'/video/'+videos[1].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                         </div>
                     </div>
                     <div class="small-video-card video-card">
@@ -19,7 +19,7 @@
                         </div>
                         <div class="title-n-button">
                             <h3>{{videos[2].heading}}</h3>
-                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                            <a class="watch-button" :href="'/'+videos[2].lang+'/video/'+videos[2].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                     </div>
                     <div class="title-n-button">
                         <h3> {{videos[0].heading}} </h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        <a class="watch-button" :href="'/'+videos[0].lang+'/video/'+videos[0].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                     </div>
                 </div>
                 <div class="double-video-small-group">
@@ -39,7 +39,7 @@
                         </div>
                         <div class="title-n-button">
                             <h3>{{videos[3].heading}}</h3>
-                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                            <a class="watch-button" :href="'/'+videos[3].lang+'/video/'+videos[3].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                         </div>
                     </div>
                     <div class="small-video-card video-card">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="title-n-button">
                             <h3>{{videos[4].heading}}</h3>
-                            <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                            <a class="watch-button" :href="'/'+videos[4].lang+'/video/'+videos[4].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                         </div>
                     </div>
                 </div>    
@@ -60,7 +60,7 @@
                     </div>
                     <div class="title-n-button">
                         <h3>{{videos[5].heading}}</h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        <a class="watch-button" :href="'/'+videos[5].lang+'/video/'+videos[5].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                     </div>
                 </div>
                 <div class="small-video-card video-card">
@@ -69,7 +69,7 @@
                     </div>
                     <div class="title-n-button">
                         <h3>{{videos[6].heading}}</h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        <a class="watch-button" :href="'/'+videos[6].lang+'/video/'+videos[6].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                     </div>
                 </div>
                 <div class="small-video-card video-card">
@@ -78,7 +78,7 @@
                     </div>
                     <div class="title-n-button">
                         <h3>{{videos[7].heading}}</h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        <a class="watch-button" :href="'/'+videos[7].lang+'/video/'+videos[7].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                     </div>
                 </div>
                 <div class="small-video-card video-card">
@@ -87,7 +87,7 @@
                     </div>
                     <div class="title-n-button">
                         <h3>{{videos[8].heading}}</h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        <a class="watch-button" :href="'/'+videos[8].lang+'/video/'+videos[8].slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="title-n-button">
                         <h3>{{video.heading}}</h3>
-                        <button class="watch-button"><i class="fas fa-play-circle"></i>{{watch}}</button>
+                        <a class="watch-button" :href="'/'+video.lang+'/video/'+video.slug"><i class="fas fa-play-circle"></i>{{watch}}</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +155,7 @@ export default {
 
 
 <style>
-
+/*
     .bottom-video-card-group{
         display : flex;
         flex-direction : row;
@@ -223,6 +223,7 @@ export default {
         background: #f5f6fa;
         font-family: 'Cairo', sans-serif;        
         font-weight : bold;
+        font-size:14px;
         border : none;
         color: #2C3A47;
         outline: none;
@@ -338,5 +339,5 @@ export default {
             width: 100%;
         }
     }
-
+*/
 </style>
