@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Mail;
 use \App\Mail\Mymail;
+use \App\Subscriber;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -30,7 +31,14 @@ class Article extends Model
         
         parent::save();
 
-        Mail::to("mamado.amine.nihon@gmail.com")->send(new Mymail($this));
+        $this->body = substr($this->body, 0 , strpos($this->body,' ',90)).'...';
+
+        $subscribers=Subscriber::all();
+
+        foreach ($subscribers as $subscriber){
+            Mail::to($subscriber->email)->send(new Mymail($this));
+        }
+
                 
     }
 
