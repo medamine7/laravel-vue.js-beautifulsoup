@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Mail;
+use \App\Mail\Mymail;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -28,7 +30,8 @@ class Article extends Model
         
         parent::save();
 
-        
+        Mail::to("mamado.amine.nihon@gmail.com")->send(new Mymail($this));
+                
     }
 
     public function authorId()

@@ -1,0 +1,45 @@
+body{
+    text-align: center;
+    font-family:'cairo',sans-serif;
+}
+
+
+.header{
+    background :#34495e;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+}
+
+.content{
+    max-width: 550px;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.content img{
+    width: 100%;
+    height: auto;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.read-more-btn{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: #0984e3;
+    margin: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.footer{
+    background :#34495e;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+}
