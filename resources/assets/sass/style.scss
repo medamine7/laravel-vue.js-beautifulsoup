@@ -962,6 +962,7 @@ hr{
     
     .more-vids-btn{
         background: #41abff;
+        border-radius : 5px;
         color : #2C3A47;
         margin: 20px auto;
         padding: 0 50px;
@@ -971,6 +972,13 @@ hr{
         justify-content: center;
         width: 120px;
         white-space : nowrap;
+    }
+    .more-vids-btn img{
+      width : 30px;
+    }
+
+    .more-vids-btn:active{
+      background : #358bd0;
     }
 
     .more-vids-btn h2{

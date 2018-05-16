@@ -27,6 +27,7 @@ Vue.component("article-modal",require('./components/article-modal.vue'));
 Vue.component("menu-hamburger",require('./components/menu-hamburger.vue'));
 Vue.component("videos",require('./components/videos.vue'));
 Vue.component("sub-alert",require('./components/sub-alert.vue'));
+Vue.component("preloader",require('./components/preloader.vue'));
 
 
 

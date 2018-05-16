@@ -1419,6 +1419,7 @@ Vue.component("article-modal", __webpack_require__(75));
 Vue.component("menu-hamburger", __webpack_require__(80));
 Vue.component("videos", __webpack_require__(85));
 Vue.component("sub-alert", __webpack_require__(98));
+Vue.component("preloader", __webpack_require__(103));
 
 var app = new Vue({
     el: '#app',
@@ -49283,7 +49284,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/*\r\n    .bottom-video-card-group{\r\n        display : flex;\r\n        flex-direction : row;\r\n        width: 100%;\r\n        justify-content: space-between;\r\n    }\r\n\r\n    .triple-video-group{\r\n        display: flex;\r\n        flex-direction: row;\r\n        width: 100%;\r\n        justify-content: center;\r\n    }\r\n\r\n    .double-video-small-group{\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    .video-card{\r\n        position : relative;\r\n        overflow: hidden;\r\n    }\r\n\r\n    .large-video-card{\r\n        width: 410px;\r\n        height : 360px;\r\n        margin: 0 10px;\r\n        \r\n    }\r\n\r\n    .small-video-card{\r\n        width: 200px;\r\n        height: 175px;\r\n        margin-bottom: 10px;\r\n    }\r\n\r\n    .video-thumbnail-container img{\r\n        width : auto;\r\n        height: 100%;\r\n    }\r\n\r\n    .video-thumbnail-container{\r\n        width: 100%;\r\n        height: 100%;\r\n        position: relative;\r\n    }\r\n\r\n    .video-thumbnail-container:after{\r\n        content: '';\r\n        width: 100%;\r\n        height: 100%;\r\n        background: rgba(0, 0, 0, .5);\r\n        position :absolute;\r\n        top: 0;\r\n        transition : .2s opacity;\r\n        right: 0;\r\n    }\r\n\r\n    .watch-button{\r\n        border-radius: 20px;\r\n        height: auto;\r\n        padding: 2px 25px;\r\n        text-align: center;\r\n        background: #f5f6fa;\r\n        font-family: 'Cairo', sans-serif;        \r\n        font-weight : bold;\r\n        font-size:14px;\r\n        border : none;\r\n        color: #2C3A47;\r\n        outline: none;\r\n        cursor: pointer;\r\n    }\r\n\r\n    .title-n-button svg{\r\n        margin : 0 0 0 10px;\r\n        color: #6D214F;\r\n    }\r\n\r\n    \r\n    .title-n-button{\r\n        position: absolute;\r\n        padding: 15px 10px;\r\n        bottom:0;\r\n        right:0;\r\n        left:0;\r\n        box-sizing: border-box;\r\n    }\r\n\r\n    .title-n-button h3{\r\n        text-align: right;\r\n        color: #f5f6fa; \r\n        font-size: 15px;       \r\n    }\r\n    \r\n    \r\n\r\n    .large-video-card .title-n-button h3{\r\n        font-size: 1.17em;\r\n        \r\n    }\r\n    \r\n    .more-vids-btn{\r\n        background: #55E6C1;\r\n        color : #2C3A47;\r\n        margin: 20px auto;\r\n        padding: 0 50px;\r\n        cursor: pointer;\r\n        height:50px;\r\n        display : flex;\r\n        justify-content: center;\r\n        width: 120px;\r\n        white-space : nowrap;\r\n    }\r\n\r\n    .more-vids-btn h2{\r\n        margin : 0;\r\n        display: inline-block;\r\n    }\r\n\r\n    .videos-container{\r\n        display: flex;\r\n        justify-content: space-between;\r\n        direction :rtl;\r\n        flex-direction: row;\r\n        margin: auto;\r\n        flex-wrap : wrap;\r\n        width: 830px;\r\n    }\r\n\r\n    @media (max-width : 830px){\r\n        .triple-video-group{\r\n            flex-direction: column;\r\n        }\r\n\r\n        .large-video-card{\r\n            margin: 0;\r\n            order : 1;\r\n            margin-bottom: 10px;\r\n            \r\n        }\r\n        \r\n        .videos-container{\r\n            width: 410px;\r\n        }\r\n\r\n        .double-video-small-group{\r\n            flex-direction: row;\r\n            justify-content: space-between;\r\n            order : 2;\r\n        }\r\n\r\n        .bottom-video-card-group{\r\n            flex-wrap: wrap;\r\n        }\r\n    }\r\n\r\n    @media (max-width : 430px){\r\n        .videos-container{\r\n            width: 80%;\r\n        }\r\n\r\n        .small-video-card{\r\n            width : 49%;\r\n            height:133px;\r\n            font-size:12px;\r\n        }\r\n\r\n        .watch-btn{\r\n            padding: 2px 10px;\r\n        }\r\n\r\n\r\n        .title-n-button h3{\r\n            font-size: 13px;       \r\n        }\r\n\r\n\r\n        .large-video-card{\r\n            height : 260px;\r\n            width: 100%;\r\n        }\r\n    }\r\n*/\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n/*\r\n    .bottom-video-card-group{\r\n        display : flex;\r\n        flex-direction : row;\r\n        width: 100%;\r\n        justify-content: space-between;\r\n    }\r\n\r\n    .triple-video-group{\r\n        display: flex;\r\n        flex-direction: row;\r\n        width: 100%;\r\n        justify-content: center;\r\n    }\r\n\r\n    .double-video-small-group{\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    .video-card{\r\n        position : relative;\r\n        overflow: hidden;\r\n    }\r\n\r\n    .large-video-card{\r\n        width: 410px;\r\n        height : 360px;\r\n        margin: 0 10px;\r\n        \r\n    }\r\n\r\n    .small-video-card{\r\n        width: 200px;\r\n        height: 175px;\r\n        margin-bottom: 10px;\r\n    }\r\n\r\n    .video-thumbnail-container img{\r\n        width : auto;\r\n        height: 100%;\r\n    }\r\n\r\n    .video-thumbnail-container{\r\n        width: 100%;\r\n        height: 100%;\r\n        position: relative;\r\n    }\r\n\r\n    .video-thumbnail-container:after{\r\n        content: '';\r\n        width: 100%;\r\n        height: 100%;\r\n        background: rgba(0, 0, 0, .5);\r\n        position :absolute;\r\n        top: 0;\r\n        transition : .2s opacity;\r\n        right: 0;\r\n    }\r\n\r\n    .watch-button{\r\n        border-radius: 20px;\r\n        height: auto;\r\n        padding: 2px 25px;\r\n        text-align: center;\r\n        background: #f5f6fa;\r\n        font-family: 'Cairo', sans-serif;        \r\n        font-weight : bold;\r\n        font-size:14px;\r\n        border : none;\r\n        color: #2C3A47;\r\n        outline: none;\r\n        cursor: pointer;\r\n    }\r\n\r\n    .title-n-button svg{\r\n        margin : 0 0 0 10px;\r\n        color: #6D214F;\r\n    }\r\n\r\n    \r\n    .title-n-button{\r\n        position: absolute;\r\n        padding: 15px 10px;\r\n        bottom:0;\r\n        right:0;\r\n        left:0;\r\n        box-sizing: border-box;\r\n    }\r\n\r\n    .title-n-button h3{\r\n        text-align: right;\r\n        color: #f5f6fa; \r\n        font-size: 15px;       \r\n    }\r\n    \r\n    \r\n\r\n    .large-video-card .title-n-button h3{\r\n        font-size: 1.17em;\r\n        \r\n    }\r\n    \r\n    .more-vids-btn{\r\n        background: #55E6C1;\r\n        color : #2C3A47;\r\n        margin: 20px auto;\r\n        padding: 0 50px;\r\n        cursor: pointer;\r\n        height:50px;\r\n        display : flex;\r\n        justify-content: center;\r\n        width: 120px;\r\n        white-space : nowrap;\r\n    }\r\n\r\n    .more-vids-btn h2{\r\n        margin : 0;\r\n        display: inline-block;\r\n    }\r\n\r\n    .videos-container{\r\n        display: flex;\r\n        justify-content: space-between;\r\n        direction :rtl;\r\n        flex-direction: row;\r\n        margin: auto;\r\n        flex-wrap : wrap;\r\n        width: 830px;\r\n    }\r\n\r\n    @media (max-width : 830px){\r\n        .triple-video-group{\r\n            flex-direction: column;\r\n        }\r\n\r\n        .large-video-card{\r\n            margin: 0;\r\n            order : 1;\r\n            margin-bottom: 10px;\r\n            \r\n        }\r\n        \r\n        .videos-container{\r\n            width: 410px;\r\n        }\r\n\r\n        .double-video-small-group{\r\n            flex-direction: row;\r\n            justify-content: space-between;\r\n            order : 2;\r\n        }\r\n\r\n        .bottom-video-card-group{\r\n            flex-wrap: wrap;\r\n        }\r\n    }\r\n\r\n    @media (max-width : 430px){\r\n        .videos-container{\r\n            width: 80%;\r\n        }\r\n\r\n        .small-video-card{\r\n            width : 49%;\r\n            height:133px;\r\n            font-size:12px;\r\n        }\r\n\r\n        .watch-btn{\r\n            padding: 2px 10px;\r\n        }\r\n\r\n\r\n        .title-n-button h3{\r\n            font-size: 13px;       \r\n        }\r\n\r\n\r\n        .large-video-card{\r\n            height : 260px;\r\n            width: 100%;\r\n        }\r\n    }\r\n*/\r\n", ""]);
 
 // exports
 
@@ -49409,8 +49410,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     props: ["watch", "more", "load", "isload", "indicator", "route", 'category'],
     methods: {
         getMoreVideos: function getMoreVideos() {
+            this.loading = true;
             var Ref = this;
             axios.get("/get_videos/" + this.category + "/" + Ref.vid_num).then(function (response) {
+                Ref.loading = false;
                 var videos = response.data;
                 videos.forEach(function (element) {
                     element.image = "/storage/" + element.image;
@@ -49425,7 +49428,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             videos: '',
-            vid_num: 17
+            vid_num: 17,
+            loading: false
         };
     },
     created: function created() {
@@ -49766,7 +49770,11 @@ var render = function() {
       ? _c(
           "a",
           { staticClass: "more-vids-btn", on: { click: _vm.getMoreVideos } },
-          [_c("h2", [_vm._v(_vm._s(_vm.load))])]
+          [
+            !_vm.loading ? _c("h2", [_vm._v(_vm._s(_vm.load))]) : _vm._e(),
+            _vm.loading ? _c("preloader") : _vm._e()
+          ],
+          1
         )
       : _vm._e()
   ])
@@ -49901,18 +49909,9 @@ var render = function() {
   return _c("transition", { attrs: { name: "bounceUp" } }, [
     _vm.opened
       ? _c("div", { staticClass: "sub-alert" }, [
-          _c(
-            "div",
-            {
-              staticClass: "close-icon",
-              on: {
-                click: function($event) {
-                  _vm.opened = false
-                }
-              }
-            },
-            [_c("i", { staticClass: "fas fa-times" })]
-          ),
+          _c("div", { staticClass: "close-icon", on: { click: _vm.close } }, [
+            _c("i", { staticClass: "fas fa-times" })
+          ]),
           _vm._v(" "),
           _c("p", [_vm._v(_vm._s(_vm.subscribeMsg))]),
           _vm._v(" "),
@@ -50027,6 +50026,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return re.test(email);
         },
+
+        close: function close() {
+            this.opened = false;
+            sessionStorage.subscription_seen = true;
+        },
         sendData: function sendData() {
             var _this = this;
 
@@ -50040,6 +50044,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 lang: this.lang
             }).then(function (response) {
                 _this.opened = false;
+                sessionStorage.subscription_seen = true;
             }).catch(function (error) {
                 console.log(error);
             });
@@ -50048,11 +50053,137 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     created: function created() {
         var _this2 = this;
 
-        setTimeout(function () {
-            _this2.opened = true;
-        }, '7000');
+        if (!sessionStorage.subscription_seen) {
+            setTimeout(function () {
+                _this2.opened = true;
+            }, '7000');
+        }
     }
 });
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(104)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(106)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\preloader.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-091e7c2f", Component.options)
+  } else {
+    hotAPI.reload("data-v-091e7c2f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(105);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("b069f858", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-091e7c2f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./preloader.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-091e7c2f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./preloader.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.spinner {\r\n  margin: auto;\r\n  width: 70px;\r\n  text-align: center;\n}\n.spinner > div {\r\n  width: 18px;\r\n  height: 18px;\r\n  background-color: #263645;\r\n\r\n  border-radius: 100%;\r\n  display: inline-block;\r\n  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;\r\n  animation: sk-bouncedelay 1.4s infinite ease-in-out both;\n}\n.spinner .bounce1 {\r\n  -webkit-animation-delay: -0.32s;\r\n  animation-delay: -0.32s;\n}\n.spinner .bounce2 {\r\n  -webkit-animation-delay: -0.16s;\r\n  animation-delay: -0.16s;\n}\n@-webkit-keyframes sk-bouncedelay {\n0%, 80%, 100% { -webkit-transform: scale(0)\n}\n40% { -webkit-transform: scale(1.0)\n}\n}\n@keyframes sk-bouncedelay {\n0%, 80%, 100% { \r\n    -webkit-transform: scale(0);\r\n    transform: scale(0);\n}\n40% { \r\n    -webkit-transform: scale(1.0);\r\n    transform: scale(1.0);\n}\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "spinner" }, [
+      _c("div", { staticClass: "bounce1" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "bounce2" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "bounce3" })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-091e7c2f", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

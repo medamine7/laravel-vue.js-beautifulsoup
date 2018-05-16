@@ -104,7 +104,7 @@
             </div>
         
             <a v-if="!isload" :href="route" class="more-vids-btn"><h2>{{more}}</h2></a>                  
-            <a v-if="isload" class="more-vids-btn" @click="getMoreVideos"><h2>{{load}}</h2></a>                  
+            <a v-if="isload" class="more-vids-btn" @click="getMoreVideos"><h2 v-if="!loading">{{load}}</h2><preloader v-if="loading"></preloader></a>                  
         </div>
 </template>
 
@@ -113,9 +113,11 @@ export default {
     props : ["watch","more","load","isload","indicator","route",'category'],
     methods : {
         getMoreVideos(){
+            this.loading=true;
             var Ref=this;                    
             axios.get("/get_videos/"+this.category+"/"+Ref.vid_num)
             .then(function (response) {
+                Ref.loading=false;
                 var videos=response.data;
                 videos.forEach(function(element) {
                     element.image="/storage/"+element.image;
@@ -133,6 +135,7 @@ export default {
         return{
             videos:'',
             vid_num: 17,
+            loading : false
         }
     },
     created(){

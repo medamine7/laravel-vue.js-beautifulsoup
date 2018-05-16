@@ -1,7 +1,7 @@
 <template>
     <transition name="bounceUp">
         <div v-if="opened" class="sub-alert">
-            <div @click="opened=false" class="close-icon">
+            <div @click="close" class="close-icon">
                 <i class="fas fa-times"></i>            
             </div>
             <p>{{subscribeMsg}}</p>
@@ -31,6 +31,12 @@ export default {
         var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(email);
       },
+
+      close(){
+        this.opened=false;  
+        sessionStorage.subscription_seen=true;                      
+      },
+
       sendData(){
           if (!this.validEmail(this.email)) {
               this.error=this.invalidEmail;
@@ -42,7 +48,8 @@ export default {
               lang : this.lang
           })
             .then((response) => {
-                this.opened=false;           
+                this.opened=false;
+                sessionStorage.subscription_seen=true;          
             })
             .catch(function (error) {
                 console.log(error);
@@ -50,10 +57,11 @@ export default {
       }
   },
   created(){
-      
-        setTimeout(() => {
+      if(!sessionStorage.subscription_seen){
+          setTimeout(() => {
             this.opened=true;
         }, '7000');
+      }
   }
 }
 </script>
