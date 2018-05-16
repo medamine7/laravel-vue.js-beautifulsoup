@@ -33,7 +33,7 @@ class Article extends Model
 
         $this->body = substr($this->body, 0 , strpos($this->body,' ',90)).'...';
 
-        $subscribers=Subscriber::all();
+        $subscribers=Subscriber::where('lang',$this->lang)->get;
 
         foreach ($subscribers as $subscriber){
             Mail::to($subscriber->email)->send(new Mymail($this));

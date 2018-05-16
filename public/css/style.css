@@ -64,7 +64,6 @@ li {
 .navbar {
   position: relative;
   z-index: 100;
-  direction: rtl;
   height: 53px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,6 +154,7 @@ li {
 
 .ad-wide {
   margin: auto;
+  border: 2px dashed black;
 }
 
 .card {
@@ -166,7 +166,6 @@ li {
 }
 
 .card h3 {
-  direction: rtl;
   padding: 0 5px;
 }
 
@@ -224,9 +223,9 @@ li {
   width: 320px;
   height: 400px;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card-medium img {
@@ -287,7 +286,6 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  direction: rtl;
 }
 
 @media (max-width: 450px) {
@@ -364,6 +362,7 @@ li {
 
 .ad-tall {
   margin: 20px auto;
+  border: 2px dashed black;
 }
 
 .indicator {
@@ -454,7 +453,6 @@ li {
   padding: 0;
   background: #55E6C1;
   display: none;
-  direction: rtl;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -621,12 +619,10 @@ li {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  direction: rtl;
 }
 
 .tables-container {
   background: #f5f6fa;
-  direction: rtl;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,7 +673,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  direction: rtl;
   margin-top: 50px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -798,7 +793,6 @@ footer li {
 .article-meta {
   background: #fff;
   padding: 10px;
-  direction: rtl;
 }
 
 .article-meta p {
@@ -1061,7 +1055,6 @@ hr {
 
 .video-heading {
   color: #fff;
-  direction: rtl;
   padding: 0 10px;
 }
 
@@ -1146,7 +1139,7 @@ hr {
 .watch-button {
   border-radius: 20px;
   height: auto;
-  padding: 2px 25px;
+  padding: 2px 15px;
   text-align: center;
   background: #f5f6fa;
   font-family: 'Cairo', sans-serif;
@@ -1159,8 +1152,12 @@ hr {
 }
 
 .title-n-button svg {
-  margin: 0 0 0 10px;
+  margin: 0 5px;
   color: #6D214F;
+}
+
+.title-n-button span {
+  margin: 0 5px;
 }
 
 .title-n-button {
@@ -1174,7 +1171,6 @@ hr {
 }
 
 .title-n-button h3 {
-  text-align: right;
   color: #f5f6fa;
   font-size: 15px;
 }
@@ -1225,7 +1221,6 @@ hr {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  direction: rtl;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1350,6 +1345,10 @@ hr {
 .other-videos {
   color: #354756;
   padding: 0 10px;
+  direction: rtl;
+}
+
+.arabic-layout {
   direction: rtl;
 }
 

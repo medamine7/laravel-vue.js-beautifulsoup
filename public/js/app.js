@@ -47797,13 +47797,13 @@ var render = function() {
       },
       [
         _c("div", { staticClass: "card card-large" }, [
-          _c("div", { staticClass: "title-container" }, [
-            _c("h3", [_vm._v(_vm._s(_vm.article.heading))])
-          ]),
-          _vm._v(" "),
           _c("img", {
             attrs: { src: "/storage/" + _vm.article.image, alt: "" }
-          })
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "title-container" }, [
+            _c("h3", [_vm._v(_vm._s(_vm.article.heading))])
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "article-meta" }, [
@@ -47965,13 +47965,13 @@ var render = function() {
       },
       [
         _c("div", { staticClass: "card card-medium" }, [
-          _c("div", { staticClass: "title-container" }, [
-            _c("h3", [_vm._v(_vm._s(_vm.article.heading))])
-          ]),
-          _vm._v(" "),
           _c("img", {
             attrs: { src: "/storage/" + _vm.article.image, alt: "" }
-          })
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "title-container" }, [
+            _c("h3", [_vm._v(_vm._s(_vm.article.heading))])
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "article-meta" }, [
@@ -48133,13 +48133,13 @@ var render = function() {
       },
       [
         _c("div", { staticClass: "card card-small" }, [
-          _c("div", { staticClass: "title-container" }, [
-            _c("h3", [_vm._v(_vm._s(_vm.article.heading))])
-          ]),
-          _vm._v(" "),
           _c("img", {
             attrs: { src: "/storage/" + _vm.article.image, alt: "" }
-          })
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "title-container" }, [
+            _c("h3", [_vm._v(_vm._s(_vm.article.heading))])
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "article-meta" }, [
@@ -48640,7 +48640,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["articles"],
+    props: ["articles", "pageDirection"],
     methods: {}
 
 });
@@ -48653,13 +48653,8 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "headlines" }, [
+  return _c("div", { class: "headlines " + _vm.pageDirection }, [
     _c("div", { staticClass: "large-group-container" }, [
-      _c("img", {
-        staticClass: "ad-tall",
-        attrs: { src: "/images/ad-tall.jpg", alt: "" }
-      }),
-      _vm._v(" "),
       _c(
         "div",
         { staticClass: "large-group" },
@@ -48678,7 +48673,12 @@ var render = function() {
           )
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "ad-tall",
+        attrs: { src: "/images/ad-tall.jpg", alt: "" }
+      })
     ]),
     _vm._v(" "),
     _c(
@@ -49407,7 +49407,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ["watch", "more", "load", "isload", "indicator", "route", 'category'],
+    props: ["watch", "more", "load", "isload", "indicator", "route", 'category', 'pageDirection'],
     methods: {
         getMoreVideos: function getMoreVideos() {
             this.loading = true;
@@ -49458,7 +49458,7 @@ var render = function() {
     _vm.videos
       ? _c(
           "div",
-          { staticClass: "videos-container" },
+          { class: "videos-container " + _vm.pageDirection },
           [
             _c("div", { staticClass: "indicator" }, [
               _c("h1", [_vm._v(_vm._s(_vm.indicator))])
@@ -49488,7 +49488,7 @@ var render = function() {
                       },
                       [
                         _c("i", { staticClass: "fas fa-play-circle" }),
-                        _vm._v(_vm._s(_vm.watch))
+                        _c("span", [_vm._v(_vm._s(_vm.watch))])
                       ]
                     )
                   ])
@@ -49516,7 +49516,7 @@ var render = function() {
                       },
                       [
                         _c("i", { staticClass: "fas fa-play-circle" }),
-                        _vm._v(_vm._s(_vm.watch))
+                        _c("span", [_vm._v(_vm._s(_vm.watch))])
                       ]
                     )
                   ])
@@ -49545,7 +49545,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
+                      _c("span", [_vm._v(_vm._s(_vm.watch))])
                     ]
                   )
                 ])
@@ -49574,7 +49574,7 @@ var render = function() {
                       },
                       [
                         _c("i", { staticClass: "fas fa-play-circle" }),
-                        _vm._v(_vm._s(_vm.watch))
+                        _c("span", [_vm._v(_vm._s(_vm.watch))])
                       ]
                     )
                   ])
@@ -49602,7 +49602,7 @@ var render = function() {
                       },
                       [
                         _c("i", { staticClass: "fas fa-play-circle" }),
-                        _vm._v(_vm._s(_vm.watch))
+                        _c("span", [_vm._v(_vm._s(_vm.watch))])
                       ]
                     )
                   ])
@@ -49633,7 +49633,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
+                      _c("span", [_vm._v(_vm._s(_vm.watch))])
                     ]
                   )
                 ])
@@ -49661,7 +49661,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
+                      _c("span", [_vm._v(_vm._s(_vm.watch))])
                     ]
                   )
                 ])
@@ -49689,7 +49689,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
+                      _c("span", [_vm._v(_vm._s(_vm.watch))])
                     ]
                   )
                 ])
@@ -49717,7 +49717,7 @@ var render = function() {
                     },
                     [
                       _c("i", { staticClass: "fas fa-play-circle" }),
-                      _vm._v(_vm._s(_vm.watch))
+                      _c("span", [_vm._v(_vm._s(_vm.watch))])
                     ]
                   )
                 ])
@@ -49747,7 +49747,7 @@ var render = function() {
                           },
                           [
                             _c("i", { staticClass: "fas fa-play-circle" }),
-                            _vm._v(_vm._s(_vm.watch))
+                            _c("span", [_vm._v(_vm._s(_vm.watch))])
                           ]
                         )
                       ])

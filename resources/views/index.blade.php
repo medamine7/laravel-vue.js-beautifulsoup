@@ -5,14 +5,14 @@
 @section('content')
 <div class="container">
         <div class="indicator"><h1>{{__("indicators.featured")}}</h1></div>
-        <headlines @cardclicked="getContent($event)" :articles="{{$articles}}"></headlines>
+        <headlines @cardclicked="getContent($event)" :articles="{{$articles}}" page-direction="{{__("navbar.page-direction")}}"></headlines>
     </div>
     <div class="indicator"><h1>{{__("indicators.latest")}}</h1></div>
     <div class="latest">
         <carousel @cardclicked="getContent($event)" :articles="{{$articles}}"></carousel>
     </div>
     <div class="videos">
-        <videos category="{{$category}}" :isload="false" route="{{route('videosRoute')}}" indicator="{{__("indicators.videos")}}" watch="{{__("buttons.watch")}}" more="{{__("buttons.more")}}"><videos>
+        <videos category="{{$category}}" :isload="false" route="{{route('videosRoute')}}" page-direction="{{__("navbar.page-direction")}}" indicator="{{__("indicators.videos")}}" watch="{{__("buttons.watch")}}" more="{{__("buttons.more")}}"><videos>
     </div> 
     <div class="leagues-rank-container">
         <div class="indicator"><h1>{{__("indicators.ranking")}}</h1></div>

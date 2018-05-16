@@ -1,3 +1,27 @@
+<!--
+    
+    
+                         created by :
+ 
+ ________      ________      ___           ________      ________      ___     
+|\   __  \    |\   __  \    |\  \         |\   __  \    |\   ___ \    |\  \    
+\ \  \|\ /_   \ \  \|\  \   \ \  \        \ \  \|\  \   \ \  \_|\ \   \ \  \   
+ \ \   __  \   \ \   __  \   \ \  \        \ \   __  \   \ \  \ \\ \   \ \  \  
+  \ \  \|\  \   \ \  \ \  \   \ \  \____    \ \  \ \  \   \ \  \_\\ \   \ \  \ 
+   \ \_______\   \ \__\ \__\   \ \_______\   \ \__\ \__\   \ \_______\   \ \__\
+    \|_______|    \|__|\|__|    \|_______|    \|__|\|__|    \|_______|    \|__| 
+
+
+                            Mohamed Amine
+
+                            instagram : @_mab7
+
+                                                                                                                                        
+
+
+    
+-->
+
 <!DOCTYPE html>
 <html lang="{{app()->getLocale()}}">
 <head>
@@ -21,7 +45,7 @@
             <div class="loader"></div>
         </div>
         <sub-alert invalid-email="{{__('sub-alert.invalid_email')}}" lang=" {{app()->getLocale()}} " subscribe-email-placeholder=" {{__('sub-alert.subscribe_email_placeholder')}} " subscribe-btn-text=" {{__('sub-alert.subscribe_btn_text')}} " subscribe-msg=" {{__('sub-alert.subscribe_msg')}} "></sub-alert>
-        <div class="header">
+        <div class="header {{__('navbar.page-direction')}}">
             <div class="links">
                 <ul>
                     <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
@@ -34,8 +58,8 @@
                 </div>
             </div>
             <div class="logo-container">
-                <img class="ad-wide" src="{{asset('images/ad-wide.png')}}" alt="">
                 <span class="logo"><a href="/"><img src="{{asset('images/logo.png')}}" alt="LOGO"></a></span>
+                <img class="ad-wide" src="{{asset('images/ad-wide.png')}}" alt="">
             </div>
             <div class="navbar">
                 <ul>
