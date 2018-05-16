@@ -15,6 +15,7 @@ class TranslateApi
      */
     public function handle($request, Closure $next)
     {
+        
         $segment = $request->segment(1);
 
         if ($segment=="en"){
