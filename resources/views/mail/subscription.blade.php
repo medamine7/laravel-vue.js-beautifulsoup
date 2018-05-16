@@ -62,7 +62,7 @@
 <body>
     <div class="header">
         <h2>{{$article->heading}}</h2>
-    </div>
+    </div>  
     <div class="content">
         <img src="/storage/{{$article->image}}" alt="">
         <p>{!!$article->body!!}</p>

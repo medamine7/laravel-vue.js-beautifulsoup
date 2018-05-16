@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section("title", __("navbar.leagues"))
 
 @section('content')
     <div class="container">

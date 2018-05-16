@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section("title", __("navbar.videos"))
 
 @section('content')
     <div class="adv-wide"></div>    

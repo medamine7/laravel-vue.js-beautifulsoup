@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section("title", __("navbar.home"))
 
 @section('content')
 <div class="container">

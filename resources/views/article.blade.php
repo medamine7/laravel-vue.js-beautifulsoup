@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section("title",$article->heading)
+
 @section("facebook-script")
 <div id="fb-root"></div>
     <script>(function(d, s, id) {
