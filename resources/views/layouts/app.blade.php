@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="logo-container">
-                <div class="adv-wide"></div>
+                <img class="ad-wide" src="{{asset('images/ad-wide.png')}}" alt="">
                 <span class="logo"><a href="/"><img src="{{asset('images/logo.png')}}" alt="LOGO"></a></span>
             </div>
             <div class="navbar">

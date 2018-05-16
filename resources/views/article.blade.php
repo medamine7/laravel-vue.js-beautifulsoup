@@ -29,7 +29,7 @@
         </div>
     </div>
     <div class="suggestions">
-        <div class="adv"></div>        
+        <img class="ad-tall" src="{{asset('images/ad-tall.jpg')}}" alt="">                
         <div class="indicator  small-indicator"><h1>{{__("indicators.recommended")}}</h1></div>  
         <small-card :key="article.article_id" v-for="article in {{$suggestions}}" :article="article"></small-card>
     </div>

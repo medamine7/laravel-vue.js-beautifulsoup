@@ -84,14 +84,14 @@ li {
 }
 
 .navbar li:hover:not(.borderless) {
-  border-bottom: #6D214F 3px solid;
+  border-bottom: #41abff 3px solid;
 }
 
 .navbar li:before {
   content: "";
   height: 1.375rem;
   width: .09rem;
-  background-color: #839ba0;
+  background-color: #cfdadc;
   display: block;
   right: -10px;
   position: absolute;
@@ -122,7 +122,7 @@ li {
 }
 
 .navbar a {
-  color: #2C3A47;
+  color: #fff;
   -webkit-transition: .5 all;
   transition: .5 all;
 }
@@ -153,11 +153,8 @@ li {
   height: auto;
 }
 
-.adv-wide {
-  max-width: 830px;
+.ad-wide {
   margin: auto;
-  height: 120px;
-  background: grey;
 }
 
 .card {
@@ -365,11 +362,8 @@ li {
   }
 }
 
-.adv {
-  width: 320px;
-  margin-bottom: 20px;
-  height: 708px;
-  background: grey;
+.ad-tall {
+  margin: 20px auto;
 }
 
 .indicator {
@@ -753,7 +747,7 @@ footer li {
   width: 250px;
   display: none;
   top: 52px;
-  background: #55E6C1;
+  background: #607D8B;
   -webkit-transition: .5s all;
   transition: .5s all;
 }
@@ -777,7 +771,7 @@ footer li {
 
 .mobile-sidebar li:hover {
   border-bottom: none !important;
-  background: #6D214F;
+  background: #41abff;
   color: #f5f6fa;
 }
 
@@ -1185,7 +1179,7 @@ hr {
 }
 
 .more-vids-btn {
-  background: #55E6C1;
+  background: #41abff;
   color: #2C3A47;
   margin: 20px auto;
   padding: 0 50px;

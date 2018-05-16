@@ -48654,7 +48654,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "headlines" }, [
     _c("div", { staticClass: "large-group-container" }, [
-      _c("div", { staticClass: "adv" }),
+      _c("img", {
+        staticClass: "ad-tall",
+        attrs: { src: "/images/ad-tall.jpg", alt: "" }
+      }),
       _vm._v(" "),
       _c(
         "div",

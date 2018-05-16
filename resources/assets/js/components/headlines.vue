@@ -1,7 +1,7 @@
 <template>
     <div class="headlines">
         <div class="large-group-container">
-            <div class="adv"></div>
+            <img src="/images/ad-tall.jpg" alt="" class="ad-tall">
             <div class="large-group">
                 <large-card :article="articles[0]"></large-card>
                 <div class="double-card">
