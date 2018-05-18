@@ -42,6 +42,7 @@ li{
 
   a{
     color: #fff;
+    transition: .2s color;
 
     &:hover{
       color: #c5c5c5;
@@ -76,6 +77,7 @@ li{
     height : 30px;
     border-bottom: transparent 3px solid;  
     position: relative; 
+    transition: .2s all;
     &:hover:not(.borderless){
       border-bottom: #41abff 3px solid;
     }
@@ -117,6 +119,8 @@ li{
   justify-content: space-between;
   padding : 10px;
   background: #fff;
+  height: 100px;
+  width: 100%;
 }
 
 .logo{
@@ -124,7 +128,7 @@ li{
     justify-content: flex-end;
     margin: 0 50px;
     img{
-        width: 115px;
+        width: 155px;
         height: auto;
     }
 }
@@ -676,11 +680,19 @@ footer{
     background: #555; 
 }
 
+.suggestions{
+  width: 320px;
+  @media (max-width : $large-width){
+      width : 100%;
+      margin: auto;
+   }
+}
+
 .article-box-container{
   margin: auto;
   width: $large-width;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
     
   @media (max-width : $large-width){
@@ -695,8 +707,7 @@ footer{
 }
 
 .article-box{
-  width: auto;
-  margin-left: 20px;
+  width: 660px;
   @media (max-width : $large-width){
       width : 100%;
       margin: auto;

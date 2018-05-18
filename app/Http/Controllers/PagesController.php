@@ -59,18 +59,41 @@ class PagesController extends Controller
 
     public function translate(){
         $pl_rank = File::get("PL_Rank.json");
-        $dict = include 'Dictionaries/pl.php';
-        foreach ($dict as $key => $value) {
+        $botola_rank = File::get("Botola_Rank.json");
+        $laliga_rank = File::get("LaLiga_Rank.json");
+        $seriea_rank = File::get("SerieA_Rank.json");
+
+        $dict_pl = include 'Dictionaries/pl.php';
+        $dict_laliga = include 'Dictionaries/laliga.php';
+        $dict_seriea = include 'Dictionaries/seriea.php';
+        $dict_botola = include 'Dictionaries/botola.php';
+
+
+        foreach ($dict_pl as $key => $value) {
             $pl_rank=str_replace($key,$key.' <strong>'.$value.'</strong>',$pl_rank);
         }
+        foreach ($dict_laliga as $key => $value) {
+            $laliga_rank=str_replace($key,$key.' <strong>'.$value.'</strong>',$laliga_rank);
+        }
+        foreach ($dict_seriea as $key => $value) {
+            $seriea_rank=str_replace($key,$key.' <strong>'.$value.'</strong>',$seriea_rank);
+        }
+
+        foreach ($dict_botola as $key => $value) {
+            $botola_rank=str_replace($key,$key.' <strong>'.$value.'</strong>',$botola_rank);
+        }
+
         File::put("PL_Rank.json",$pl_rank);
+        File::put("Botola_Rank.json",$botola_rank);
+        File::put("LaLiga_Rank.json",$laliga_rank);
+        File::put("SerieA_Rank.json",$seriea_rank);
 
     }
 
     public function index()
     {
 
-        $this->  scrap();
+        // $this->scrap();
         
         $botola_rank = File::get("Botola_Rank.json");
         $pl_rank = File::get("PL_Rank.json");

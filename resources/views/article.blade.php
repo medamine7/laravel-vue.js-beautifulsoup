@@ -15,7 +15,7 @@
 
 @section('content')
 
-<div class="article-box-container">
+<div class="article-box-container {{__('navbar.page-direction')}}">
     <div class="article-box">
         <div class="white-box">
             <h2>{{$article->heading}}</h2>

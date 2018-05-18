@@ -40,6 +40,8 @@ li {
 
 .links a {
   color: #fff;
+  -webkit-transition: .2s color;
+  transition: .2s color;
 }
 
 .links a:hover {
@@ -80,6 +82,8 @@ li {
   height: 30px;
   border-bottom: transparent 3px solid;
   position: relative;
+  -webkit-transition: .2s all;
+  transition: .2s all;
 }
 
 .navbar li:hover:not(.borderless) {
@@ -135,6 +139,8 @@ li {
           justify-content: space-between;
   padding: 10px;
   background: #fff;
+  height: 100px;
+  width: 100%;
 }
 
 .logo {
@@ -148,7 +154,7 @@ li {
 }
 
 .logo img {
-  width: 115px;
+  width: 155px;
   height: auto;
 }
 
@@ -855,6 +861,17 @@ footer li {
   background: #555;
 }
 
+.suggestions {
+  width: 320px;
+}
+
+@media (max-width: 1000px) {
+  .suggestions {
+    width: 100%;
+    margin: auto;
+  }
+}
+
 .article-box-container {
   margin: auto;
   width: 1000px;
@@ -862,9 +879,9 @@ footer li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -885,8 +902,7 @@ footer li {
 }
 
 .article-box {
-  width: auto;
-  margin-left: 20px;
+  width: 660px;
 }
 
 @media (max-width: 1000px) {

@@ -128,7 +128,7 @@
             
             
             $(document).scroll(function(){
-                if($(document).scrollTop()>=140){
+                if($(document).scrollTop()>=150){
                     $('.logo-scrolled').show();
                     $('.navbar').addClass("navbar-scrolled");
                     $('.mobile-sidebar').css("position","fixed");
