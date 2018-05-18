@@ -40,7 +40,7 @@
         position: absolute;
         height: 7px;
         width: 50%;
-        background: #2C3A47;
+        background: #cde1f5;
         opacity: 1;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);

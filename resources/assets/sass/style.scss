@@ -68,7 +68,7 @@ li{
   height : 53px;
   display: flex;
   justify-content: space-between;
-  background: #607D8B;
+  background: #000000a3;
 
   li{
     margin: 0 10px;
@@ -172,7 +172,7 @@ li{
 
    @media(max-width: 450px){
     height : 350px;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   
   img{
@@ -280,7 +280,7 @@ li{
   justify-content: space-between;
 
     @media (max-width : $large-width){
-      flex-direction: column-reverse;
+      flex-direction: column;
   }
 }
 
@@ -293,6 +293,7 @@ li{
   text-align: center;
   width : 100%;
   margin :auto;
+  white-space: nowrap;
   display : inline-block;
   h1{
     &:before,
@@ -314,18 +315,13 @@ li{
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  div:nth-of-type(4) {
-    flex-grow: 1; margin-right:20px;width:320px;
+  div:nth-of-type(4) ,div:nth-of-type(5){
+    width:490px;
     .card-small{
       width: 100%;
     }
   }
-  div:nth-of-type(5) {
-    flex-grow: 1;width:320px;
-    .card-small{
-      width: 100%;
-    }
-  }
+ 
 
   @media (max-width : $large-width){
     flex-direction: column;
@@ -419,7 +415,7 @@ li{
 
 @keyframes logoShow{
   from{top:45px}
-  to{top:-5px}
+  to{top:0px}
 }
 
 .navbar-scrolled{
@@ -493,7 +489,7 @@ li{
     padding: 0 20px;
     text-align :center;
     &:nth-child(2){
-      text-align : right;
+      display : flex;
     }
   }
 
@@ -573,12 +569,13 @@ footer{
   width: 250px;
   display: none;
   top : 52px;
-  background : #607D8B;
+  background : #000000a3;
   transition : .5s all;
 
   ul{
     flex-direction : column;
     display: flex;
+    direction : rtl;
 
   }
 
@@ -671,7 +668,7 @@ footer{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #484848; 
 }
 
 /* Handle on hover */

@@ -39,20 +39,38 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function scrap(){
+        $rank_script ='"'.storage_path("app/scripts/scrapScriptRank.py").'"';        
+        exec ("python $rank_script", $output,$return);
+        
+        //  Return will return non-zero upon an error
+        if (!$return) {
+           //
+        } else {
+            echo "problem detected, Baladi!";
+            die();
+        }
+
+        $this->translate();
+        
+    }
+
+
+    public function translate(){
+        $pl_rank = File::get("PL_Rank.json");
+        $dict = include 'Dictionaries/pl.php';
+        foreach ($dict as $key => $value) {
+            $pl_rank=str_replace($key,$key.' <strong>'.$value.'</strong>',$pl_rank);
+        }
+        File::put("PL_Rank.json",$pl_rank);
+
+    }
+
     public function index()
     {
 
-        // $rank_script ='"'.storage_path("app/scripts/scrapScriptRank.py").'"';        
-        // exec ("python $rank_script", $output,$return);
-        
-        // //  Return will return non-zero upon an error
-        // if (!$return) {
-        //    //
-        // } else {
-        //     echo "problem detected, Baladi!";
-        //     die();
-        // }
-        
+        $this->  scrap();
         
         $botola_rank = File::get("Botola_Rank.json");
         $pl_rank = File::get("PL_Rank.json");
@@ -187,16 +205,7 @@ class PagesController extends Controller
             $article->image=substr($article->image,0,-4)."-cropped".substr($article->image,-4);
         });
 
-        // $rank_script ='"'.storage_path("app/scripts/scrapScriptRank.py").'"';        
-        // exec ("python $rank_script", $output,$return);
-        
-        // //  Return will return non-zero upon an error
-        // if (!$return) {
-        //    //
-        // } else {
-        //     echo "problem detected, Baladi!";
-        //     die();
-        // }
+        // $this->scrap();
         
         
         $botola_rank = File::get("Botola_Rank.json");
@@ -208,6 +217,11 @@ class PagesController extends Controller
         
         $more_articles=$articles->splice(14);
         return view('index', compact('articles','more_articles','pl_rank','seriea_rank','laliga_rank','botola_rank','titles'))->with('category',$choice);
+    }
+
+
+    public function macthes(){
+        
     }
 
 }

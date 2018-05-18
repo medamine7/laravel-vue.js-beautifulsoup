@@ -48380,7 +48380,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["teams"]
+  props: ["teams", "played", "rank", "team", "points"]
 });
 
 /***/ }),
@@ -48392,7 +48392,17 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("table", { staticClass: "homepage__tabs-table" }, [
-    _vm._m(0),
+    _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v(_vm._s(_vm.rank))]),
+        _vm._v(" "),
+        _c("th", [_vm._v(_vm._s(_vm.team))]),
+        _vm._v(" "),
+        _c("th", [_vm._v(_vm._s(_vm.played))]),
+        _vm._v(" "),
+        _c("th", [_vm._v(_vm._s(_vm.points))])
+      ])
+    ]),
     _vm._v(" "),
     _c(
       "tbody",
@@ -48405,15 +48415,14 @@ var render = function() {
           ),
           _vm._v(" "),
           _c("td", { staticClass: "ranking-table-team" }, [
-            _c("a", { attrs: { href: "/analytics/team/3466/" } }, [
-              _c("img", {
-                staticClass: "js-lazy",
-                attrs: { "data-original": team.logo, src: team.logo }
-              }),
-              _c("span", { attrs: { title: team.name } }, [
-                _vm._v(_vm._s(team.name))
-              ])
-            ])
+            _c("img", {
+              staticClass: "js-lazy",
+              attrs: { "data-original": team.logo, src: team.logo }
+            }),
+            _c("span", {
+              attrs: { title: team.name },
+              domProps: { innerHTML: _vm._s(team.name) }
+            })
           ]),
           _vm._v(" "),
           _c("td", { staticClass: "ranking-table-matchs" }, [
@@ -48428,24 +48437,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("الرتبة")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("الفريق")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("لعب")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("النقاط")])
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -49019,7 +49011,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n.widget-menu{\n    font-size: 30px;\n    margin: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    cursor: pointer;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 62px;\n    top : 4px;        \n    height: 45px;\n    position: relative;\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n    -webkit-transition: .5s ease-in-out;\n    transition: .5s ease-in-out;\n    cursor: pointer;\n    -webkit-transform: scale(.6);\n            transform: scale(.6);\n}\n.widget-menu span {\n    display: block;\n    position: absolute;\n    height: 7px;\n    width: 50%;\n    background: #2C3A47;\n    opacity: 1;\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n    -webkit-transition: .25s ease-in-out;\n    transition: .25s ease-in-out;\n}\n.widget-menu span:nth-child(even) {\n    left: 50%;\n    border-radius: 0 9px 9px 0;\n}\n.widget-menu span:nth-child(odd) {\n    left:0px;\n    border-radius: 9px 0 0 9px;\n}\n.widget-menu span:nth-child(1), .widget-menu span:nth-child(2) {\n    top: 0px;\n}\n.widget-menu span:nth-child(3), .widget-menu span:nth-child(4) {\n    top: 18px;\n}\n.widget-menu span:nth-child(5), .widget-menu span:nth-child(6) {\n    top: 36px;\n}\n.widget-menu.open span:nth-child(1),.widget-menu.open span:nth-child(6) {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.widget-menu.open span:nth-child(2),.widget-menu.open span:nth-child(5) {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.widget-menu.open span:nth-child(1) {\n    left: 5px;\n    top: 7px;\n}\n.widget-menu.open span:nth-child(2) {\n    left: calc(50% - 5px);\n    top: 7px;\n}\n.widget-menu.open span:nth-child(3) {\n    left: -50%;\n    opacity: 0;\n}\n.widget-menu.open span:nth-child(4) {\n    left: 100%;\n    opacity: 0;\n}\n.widget-menu.open span:nth-child(5) {\n    left: 5px;\n    top: 29px;\n}\n.widget-menu.open span:nth-child(6) {\n    left: calc(50% - 5px);\n    top: 29px;\n}\n\n\n\n", ""]);
+exports.push([module.i, "\n.widget-menu{\n    font-size: 30px;\n    margin: 0;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    cursor: pointer;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column;\n    -webkit-box-pack: center;\n        -ms-flex-pack: center;\n            justify-content: center;\n    width: 62px;\n    top : 4px;        \n    height: 45px;\n    position: relative;\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n    -webkit-transition: .5s ease-in-out;\n    transition: .5s ease-in-out;\n    cursor: pointer;\n    -webkit-transform: scale(.6);\n            transform: scale(.6);\n}\n.widget-menu span {\n    display: block;\n    position: absolute;\n    height: 7px;\n    width: 50%;\n    background: #cde1f5;\n    opacity: 1;\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg);\n    -webkit-transition: .25s ease-in-out;\n    transition: .25s ease-in-out;\n}\n.widget-menu span:nth-child(even) {\n    left: 50%;\n    border-radius: 0 9px 9px 0;\n}\n.widget-menu span:nth-child(odd) {\n    left:0px;\n    border-radius: 9px 0 0 9px;\n}\n.widget-menu span:nth-child(1), .widget-menu span:nth-child(2) {\n    top: 0px;\n}\n.widget-menu span:nth-child(3), .widget-menu span:nth-child(4) {\n    top: 18px;\n}\n.widget-menu span:nth-child(5), .widget-menu span:nth-child(6) {\n    top: 36px;\n}\n.widget-menu.open span:nth-child(1),.widget-menu.open span:nth-child(6) {\n    -webkit-transform: rotate(45deg);\n    transform: rotate(45deg);\n}\n.widget-menu.open span:nth-child(2),.widget-menu.open span:nth-child(5) {\n    -webkit-transform: rotate(-45deg);\n    transform: rotate(-45deg);\n}\n.widget-menu.open span:nth-child(1) {\n    left: 5px;\n    top: 7px;\n}\n.widget-menu.open span:nth-child(2) {\n    left: calc(50% - 5px);\n    top: 7px;\n}\n.widget-menu.open span:nth-child(3) {\n    left: -50%;\n    opacity: 0;\n}\n.widget-menu.open span:nth-child(4) {\n    left: 100%;\n    opacity: 0;\n}\n.widget-menu.open span:nth-child(5) {\n    left: 5px;\n    top: 29px;\n}\n.widget-menu.open span:nth-child(6) {\n    left: calc(50% - 5px);\n    top: 29px;\n}\n\n\n\n", ""]);
 
 // exports
 

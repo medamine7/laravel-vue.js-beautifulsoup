@@ -71,7 +71,7 @@ li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: #607D8B;
+  background: #000000a3;
 }
 
 .navbar li {
@@ -201,9 +201,9 @@ li {
   .card-large {
     height: 350px;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -354,9 +354,9 @@ li {
 @media (max-width: 1000px) {
   .large-group-container {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -369,6 +369,7 @@ li {
   text-align: center;
   width: 100%;
   margin: auto;
+  white-space: nowrap;
   display: inline-block;
 }
 
@@ -399,25 +400,12 @@ li {
   width: 100%;
 }
 
-.small-group-container div:nth-of-type(4) {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  margin-right: 20px;
-  width: 320px;
-}
-
-.small-group-container div:nth-of-type(4) .card-small {
-  width: 100%;
-}
-
+.small-group-container div:nth-of-type(4),
 .small-group-container div:nth-of-type(5) {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 320px;
+  width: 490px;
 }
 
+.small-group-container div:nth-of-type(4) .card-small,
 .small-group-container div:nth-of-type(5) .card-small {
   width: 100%;
 }
@@ -545,7 +533,7 @@ li {
   }
 
   to {
-    top: -5px;
+    top: 0px;
   }
 }
 
@@ -555,7 +543,7 @@ li {
   }
 
   to {
-    top: -5px;
+    top: 0px;
   }
 }
 
@@ -643,7 +631,9 @@ li {
 }
 
 .tables-container td:nth-child(2) {
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .tables-container tr:nth-child(even) {
@@ -747,7 +737,7 @@ footer li {
   width: 250px;
   display: none;
   top: 52px;
-  background: #607D8B;
+  background: #000000a3;
   -webkit-transition: .5s all;
   transition: .5s all;
 }
@@ -760,6 +750,7 @@ footer li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  direction: rtl;
 }
 
 .mobile-sidebar li {
@@ -855,7 +846,7 @@ footer li {
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #484848;
 }
 
 /* Handle on hover */

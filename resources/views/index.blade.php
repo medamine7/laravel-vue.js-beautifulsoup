@@ -14,7 +14,7 @@
     <div class="videos">
         <videos category="{{$category}}" :isload="false" route="{{route('videosRoute')}}" page-direction="{{__("navbar.page-direction")}}" indicator="{{__("indicators.videos")}}" watch="{{__("buttons.watch")}}" more="{{__("buttons.more")}}"><videos>
     </div> 
-    <div class="leagues-rank-container">
+    <div class="leagues-rank-container {{__("navbar.page-direction")}}">
         <div class="indicator"><h1>{{__("indicators.ranking")}}</h1></div>
         <div class="leagues-rank">
             <div class="league-btn-container">
@@ -24,16 +24,16 @@
                 <button  class="botolapro-btn" :class="{'active-tab' : activeTab==4}" @click.stop="switchLeague('botolapro',4)">{{__("buttons.botola")}}</button>
             </div>
             <div class="tables-container">
-                <league-rank :teams="{{$pl_rank}}" v-if="league=='pl'"></league-rank>
-                <league-rank :teams="{{$laliga_rank}}" v-if="league=='laliga'"></league-rank>
-                <league-rank :teams="{{$seriea_rank}}" v-if="league=='seriea'"></league-rank>
-                <league-rank :teams="{{$botola_rank}}" v-if="league=='botolapro'"></league-rank>
+                <league-rank rank='{{__("ranktable.rank")}}' played='{{__("ranktable.played")}}' team='{{__("ranktable.team")}}' points='{{__("ranktable.points")}}' :teams="{{$pl_rank}}" v-if="league=='pl'"></league-rank>
+                <league-rank rank='{{__("ranktable.rank")}}' played='{{__("ranktable.played")}}' team='{{__("ranktable.team")}}' points='{{__("ranktable.points")}}' :teams="{{$laliga_rank}}" v-if="league=='laliga'"></league-rank>
+                <league-rank rank='{{__("ranktable.rank")}}' played='{{__("ranktable.played")}}' team='{{__("ranktable.team")}}' points='{{__("ranktable.points")}}' :teams="{{$seriea_rank}}" v-if="league=='seriea'"></league-rank>
+                <league-rank rank='{{__("ranktable.rank")}}' played='{{__("ranktable.played")}}' team='{{__("ranktable.team")}}' points='{{__("ranktable.points")}}' :teams="{{$botola_rank}}" v-if="league=='botolapro'"></league-rank>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="indicator"><h1>{{__("indicators.more")}}</h1></div>
-        <headlines @cardclicked="getContent($event)" :articles="{{$more_articles}}"></headlines>
+        <headlines page-direction="{{__("navbar.page-direction")}}" @cardclicked="getContent($event)" :articles="{{$more_articles}}"></headlines>
     </div>
     
     @endsection

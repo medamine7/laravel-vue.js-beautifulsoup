@@ -19,14 +19,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get("/mail",function(){
-    $json='{"heading":"عنواني",
-        "body":"مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي مقالتي ",
-        "image":"articles\\\May2018\\\p0SON0SZSLOODaXjQn7m-cropped.jpg"}';
-    $content="this is a testing matter i don't what to say other than screw that piece of shit of a teacher.this is a testing matter i don't what to say other than screw that piece of shit of a teacher.";    
-
-    return new App\Mail\myMail(json_decode($json)); 
-});
+Route::get("/meh",'PagesController@translate');
 
 
 Route::post("subscribe","SubscriptionController@subscribed");

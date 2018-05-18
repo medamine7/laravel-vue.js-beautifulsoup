@@ -86,7 +86,7 @@
         <div class="space-fix"></div>        
         @yield('content')
     </div>
-    <footer>
+    <footer class="{{__("navbar.page-direction")}}">
         <ul>
             <li><a href="">{{__("footer.aboutus")}}</a></li>
             <li><a href="">{{__("footer.privacy")}}</a></li>
@@ -128,7 +128,7 @@
             
             
             $(document).scroll(function(){
-                if($(document).scrollTop()>=170){
+                if($(document).scrollTop()>=140){
                     $('.logo-scrolled').show();
                     $('.navbar').addClass("navbar-scrolled");
                     $('.mobile-sidebar').css("position","fixed");
