@@ -932,7 +932,14 @@ hr{
         border : none;
         color: #2C3A47;
         outline: none;
+        transition: all .5s;
         cursor: pointer;
+
+        &:hover{
+          background: rgba(255, 255, 255, 0.4);
+          color: white;
+          border: 1px dashed white;
+        }
     }
 
     .title-n-button svg{
@@ -1122,6 +1129,15 @@ hr{
 .match-time{
     font-size: 15px;
     background: #e6e7ec;
+    margin: 0 5px;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.vs{
+  font-size: 15px;
+    background: $greenish;
+    margin: 0 5px;
     padding: 0 5px;
     border-radius: 5px;
 }
