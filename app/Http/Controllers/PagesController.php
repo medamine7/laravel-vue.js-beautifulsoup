@@ -28,6 +28,7 @@ use Illuminate\Support\Facades\Storage;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 use App\Article;
+use App\Match;
 use App\Article_categorie;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
@@ -243,8 +244,23 @@ class PagesController extends Controller
     }
 
 
-    public function macthes(){
-        
+    public function matches(){
+        $matches = Match::all();
+        $locale=session("locale");
+        if ($locale=='ar'){
+            $matches->map(function($match){
+                $match->home_team=$match->home_team_ar;
+                $match->away_team=$match->away_team_ar;
+                $match->league;          
+            });
+        }else{
+            $matches->map(function($match){
+                $match->home_team=$match->home_team_en;
+                $match->away_team=$match->away_team_en; 
+                $match->league;            
+            });
+        }
+        return view('matches',compact("matches"));
     }
 
 }

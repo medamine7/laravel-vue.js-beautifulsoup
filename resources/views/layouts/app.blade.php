@@ -67,7 +67,7 @@
                     <a href="/"><li>{{__("navbar.home")}}</li></a>
                     <a href="/leagues"><li>{{__("navbar.leagues")}}</li></a>
                     <a href=" {{route('videosRoute')}} "><li>{{__("navbar.videos")}}</li></a>
-                    <a href=""><li>{{__("navbar.matches")}}</li></a>
+                    <a href="/matches"><li>{{__("navbar.matches")}}</li></a>
                 </ul>
                 <div class="mobile-nav-container">
                     <a href="/" class="mobile-logo"><img src="{{asset('images/logo.png')}}" alt="LOGO"></a>
@@ -77,7 +77,7 @@
                             <a href="/"><li>{{__("navbar.home")}}</li></a>
                             <a href="/leagues"><li>{{__("navbar.leagues")}}</li></a>
                             <a href=" {{route('videosRoute')}} "><li>{{__("navbar.videos")}}</li></a>
-                            <a href=""><li>{{__("navbar.matches")}}</li></a>
+                            <a href="/matches"><li>{{__("navbar.matches")}}</li></a>
                         </ul>
                     </div>
                 </div>

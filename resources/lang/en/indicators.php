@@ -6,7 +6,8 @@
         "videos" => "Videos",
         "more" => "More news",
         "ranking" => "Rankings & matches",
-        "recommended" => "Recommended"
+        "recommended" => "Recommended",
+        "other-videos" => "Other videos"
         
     ]
 

@@ -626,7 +626,6 @@ footer{
     font-size:12px;
     font-weight : bold;
     display: inline-block;
-    margin-left: 10px;
     text-transform: uppercase;
   }
 }
@@ -716,7 +715,6 @@ footer{
 
 .white-box{
   background: #fff;
-  direction : rtl;
   p{
     font-size : 1.125rem;
     padding: 20px;
@@ -1064,7 +1062,6 @@ hr{
 
 .showroom-suggestions-container{
   display: flex;
-  direction: rtl;
   background : #354756;
   padding : 10px 0;
   justify-content: space-around;
@@ -1082,7 +1079,6 @@ hr{
   padding: 10px;
   background: #10161b;
   color : #fff;
-  direction: rtl;
 
   svg{
     margin: 0 5px;
@@ -1101,7 +1097,6 @@ hr{
     font-size:12px;
     font-weight : bold;
     display: inline-block;
-    margin-left: 10px;
     text-transform: uppercase;
   }
 }
@@ -1109,9 +1104,24 @@ hr{
 .other-videos{
   color :#354756;
   padding: 0 10px;
-  direction :rtl;
 }
 
 .arabic-layout{
   direction : rtl;
+}
+
+.score{
+  background: #4e4e4e;
+  color: white;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-size: 13px;
+  margin: 0 5px;
+}
+
+.match-time{
+    font-size: 15px;
+    background: #e6e7ec;
+    padding: 0 5px;
+    border-radius: 5px;
 }

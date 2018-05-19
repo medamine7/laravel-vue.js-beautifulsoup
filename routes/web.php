@@ -19,7 +19,6 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get("/meh",'PagesController@translate');
 
 
 Route::post("subscribe","SubscriptionController@subscribed");
@@ -35,6 +34,7 @@ Route::group(['prefix' => '{lang?}','middleware' => 'localization'],function() {
     Route::get('/', 'PagesController@index'); 
     Route::get('/leagues', 'PagesController@getLeagues'); 
     Route::get('leagues/{choice}', 'PagesController@getLeague')->name("league_chosen"); 
+    Route::get("matches","PagesController@matches");
     
 });
 

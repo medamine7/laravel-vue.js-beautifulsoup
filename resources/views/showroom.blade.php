@@ -17,7 +17,7 @@
 
 @section("content")
     <div class="adv-wide"></div>
-    <div class="showroom-container">
+    <div class="showroom-container {{__('navbar.page-direction')}}">
         <div class="video-container">
             {!!$video->body!!}
         </div>
@@ -26,7 +26,7 @@
             <p><span>{{$video->category->category_name}}</span> <i class="far fa-calendar-alt"></i>{{$video->created_at->format("d/m/Y")}} <i class="far fa-clock"></i> {{$video->created_at->format("H:i")}}</p>        
         </div>
         <hr>
-        <h3 class="other-videos">فيديوهات أخرى</h3>
+        <h3 class="other-videos">{{__('indicators.other-videos')}}</h3>
         <div class="showroom-suggestions-container">
             @foreach ($suggestions as $video)
             <div class="small-video-card video-card">
