@@ -766,7 +766,6 @@ footer li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  direction: rtl;
 }
 
 .mobile-sidebar li {
@@ -986,7 +985,6 @@ hr {
 
 .leagues-page-table {
   width: 100%;
-  direction: rtl;
   border-collapse: collapse;
 }
 
@@ -1014,7 +1012,6 @@ hr {
           box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
   right: 0;
   height: 180px;
-  direction: rtl;
   z-index: 1;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#dad4ec), color-stop(1%, #dad4ec), to(#f3e7e9));
@@ -1396,7 +1393,7 @@ hr {
   color: gray;
 }
 
-.matches-container {
+.matches-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1408,7 +1405,7 @@ hr {
 }
 
 @media (max-width: 1000px) {
-  .matches-container {
+  .matches-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1429,6 +1426,24 @@ hr {
 @media (max-width: 1000px) {
   .match-box {
     width: 100%;
+    margin: 10px 0;
   }
+}
+
+.matches-league-name {
+  padding: 0 10px;
+}
+
+.matches-container {
+  background: #efefef;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.score-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 

@@ -586,8 +586,6 @@ footer{
   ul{
     flex-direction : column;
     display: flex;
-    direction : rtl;
-
   }
 
   li{
@@ -781,7 +779,6 @@ hr{
 
 .leagues-page-table{
   width:100%;
-  direction:rtl;
   border-collapse: collapse;
   
   tr,td,table{
@@ -809,7 +806,6 @@ hr{
   box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
   right: 0;
   height: 180px;
-  direction: rtl;
   z-index: 1;
   text-align: center;
   background-image: linear-gradient(to bottom, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);  
@@ -1149,7 +1145,7 @@ hr{
     color : gray;
 }
 
-.matches-container{
+.matches-wrapper{
   display: flex;
   flex-wrap : wrap;
   justify-content: space-between;
@@ -1166,6 +1162,20 @@ hr{
   min-width: 300px;
   @media (max-width : $large-width){
       width : 100%;
+      margin: 10px 0;
    }
 }
 
+.matches-league-name{
+  padding: 0 10px;
+}
+
+.matches-container{
+  background : #efefef;
+  padding:15px;
+  box-sizing: border-box;
+}
+
+.score-container{
+  display:inline-flex;
+}

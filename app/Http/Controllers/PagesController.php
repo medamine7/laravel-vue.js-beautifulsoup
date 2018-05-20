@@ -245,22 +245,29 @@ class PagesController extends Controller
 
 
     public function matches(){
-        $matches = Match::orderBy("date",'desc')->where('date',date("Y/m/d"))->get();
         $locale=session("locale");
-        if ($locale=='ar'){
-            $matches->map(function($match){
-                $match->home_team=$match->home_team_ar;
-                $match->away_team=$match->away_team_ar;
-                $match->league;          
-            });
-        }else{
-            $matches->map(function($match){
-                $match->home_team=$match->home_team_en;
-                $match->away_team=$match->away_team_en; 
-                $match->league;            
-            });
+        $leagues=Article_categorie::all();
+        $league_matches=[];
+        foreach($leagues as $league){
+            $matches = Match::orderBy("date",'desc')->where('date',date("Y/m/d"))->where('league_id',$league->category_id)->get();
+            
+            if ($locale=='ar'){
+                $matches->map(function($match){
+                    $match->home_team=$match->home_team_ar;
+                    $match->away_team=$match->away_team_ar;
+                });
+            }else{
+                $matches->map(function($match){
+                    $match->home_team=$match->home_team_en;
+                    $match->away_team=$match->away_team_en; 
+                });
+            }
+
+            if($matches->isNotEmpty()) $locale=='ar' ? $league_matches[$league->category_name_ar]=$matches : $league_matches[$league->category_name_en]=$matches;      
         }
-        return view('matches',compact("matches"));
+            
+
+        return view('matches',["leagues" => $league_matches]);
     }
 
 }
