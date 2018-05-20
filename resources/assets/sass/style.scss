@@ -119,14 +119,15 @@ li{
   justify-content: space-between;
   padding : 10px;
   background: #fff;
-  height: 100px;
+  box-sizing:border-box;
   width: 100%;
+  @media(max-width:$large-width){
+    flex-direction: column;
+  }
 }
 
 .logo{
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 50px;
+    margin: auto;
     img{
         width: 155px;
         height: auto;
@@ -136,6 +137,9 @@ li{
 .ad-wide{
   margin:auto;
   border: 2px dashed black;
+  @media(max-width:$large-width){
+    width: 100%;
+  }
 }
 
 
@@ -481,14 +485,11 @@ li{
 
   img{
     width: 30px;
-    margin: 0 auto;
   }
 }
 
 .tables-container{
   background: $whiteish;
-  display: flex;
-  justify-content: flex-start;
   padding: 20px;
 
   img{
@@ -578,6 +579,7 @@ footer{
   height : 100vh;
   left : -250px;
   width: 250px;
+  direction:rtl;
   display: none;
   top : 52px;
   background : #000000a3;
@@ -628,7 +630,7 @@ footer{
     border-radius: 30px;
     padding: 0 10px;
     color : #fff;
-    font-size:12px;
+    font-size:10px;
     font-weight : bold;
     display: inline-block;
     text-transform: uppercase;
@@ -1168,6 +1170,7 @@ hr{
 
 .matches-league-name{
   padding: 0 10px;
+  border-bottom: rgba(#3a8dff,.5) 1px dashed;
 }
 
 .matches-container{
@@ -1178,4 +1181,10 @@ hr{
 
 .score-container{
   display:inline-flex;
+}
+
+.ranking-table-team{
+  span{
+    font-size:2.5vh;
+  }
 }

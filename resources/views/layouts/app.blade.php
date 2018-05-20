@@ -126,9 +126,8 @@
                 autoplayHoverPause:true
             });
             
-            
             $(document).scroll(function(){
-                if($(document).scrollTop()>=150){
+                if($(document).scrollTop() >= $('.logo-container').offset().top+$('.logo-container').height()+20){
                     $('.logo-scrolled').show();
                     $('.navbar').addClass("navbar-scrolled");
                     $('.mobile-sidebar').css("position","fixed");

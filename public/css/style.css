@@ -139,18 +139,22 @@ li {
           justify-content: space-between;
   padding: 10px;
   background: #fff;
-  height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 
+@media (max-width: 1000px) {
+  .logo-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin: 0 50px;
+  margin: auto;
 }
 
 .logo img {
@@ -161,6 +165,12 @@ li {
 .ad-wide {
   margin: auto;
   border: 2px dashed black;
+}
+
+@media (max-width: 1000px) {
+  .ad-wide {
+    width: 100%;
+  }
 }
 
 .card {
@@ -622,17 +632,10 @@ li {
 
 .league-btn-container img {
   width: 30px;
-  margin: 0 auto;
 }
 
 .tables-container {
   background: #f5f6fa;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   padding: 20px;
 }
 
@@ -751,6 +754,7 @@ footer li {
   height: 100vh;
   left: -250px;
   width: 250px;
+  direction: rtl;
   display: none;
   top: 52px;
   background: #000000a3;
@@ -811,7 +815,7 @@ footer li {
   border-radius: 30px;
   padding: 0 10px;
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
   display: inline-block;
   text-transform: uppercase;
@@ -1432,6 +1436,7 @@ hr {
 
 .matches-league-name {
   padding: 0 10px;
+  border-bottom: rgba(58, 141, 255, 0.5) 1px dashed;
 }
 
 .matches-container {
@@ -1445,5 +1450,9 @@ hr {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.ranking-table-team span {
+  font-size: 2.5vh;
 }
 
