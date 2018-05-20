@@ -245,7 +245,7 @@ class PagesController extends Controller
 
 
     public function matches(){
-        $matches = Match::all();
+        $matches = Match::orderBy("date",'desc')->where('date',date("Y/m/d"))->get();
         $locale=session("locale");
         if ($locale=='ar'){
             $matches->map(function($match){

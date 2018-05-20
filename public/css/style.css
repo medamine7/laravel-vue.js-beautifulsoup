@@ -576,7 +576,7 @@ li {
 
 .leagues-rank {
   margin: auto;
-  width: 600px;
+  width: 750px;
 }
 
 @media (max-width: 1000px) {
@@ -588,11 +588,16 @@ li {
 .leagues-rank button {
   font-family: "Cairo", sans-serif;
   outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background: #2C3A47;
   color: #55E6C1;
   border: none;
   cursor: pointer;
-  width: 125px;
+  width: 160px;
   padding: 10px;
   margin: 0 10px;
   border-top-left-radius: 8px;
@@ -613,6 +618,11 @@ li {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
+}
+
+.league-btn-container img {
+  width: 30px;
+  margin: 0 auto;
 }
 
 .tables-container {
@@ -1166,7 +1176,7 @@ hr {
 
 .title-n-button svg {
   margin: 0 5px;
-  color: #6D214F;
+  color: #41abff;
 }
 
 .title-n-button span {
@@ -1380,9 +1390,45 @@ hr {
 
 .vs {
   font-size: 15px;
-  background: #55E6C1;
   margin: 0 5px;
   padding: 0 5px;
   border-radius: 5px;
+  color: gray;
+}
+
+.matches-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  .matches-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.match-box {
+  background: #fff;
+  margin: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+@media (max-width: 1000px) {
+  .match-box {
+    width: 100%;
+  }
 }
 

@@ -18,10 +18,10 @@
         <div class="indicator"><h1>{{__("indicators.ranking")}}</h1></div>
         <div class="leagues-rank">
             <div class="league-btn-container">
-                <button class="pl-btn" :class="{'active-tab' : activeTab==1}"  @click.stop="switchLeague('pl',1)">{{__("buttons.epl")}}</button>
-                <button class="laliga-btn" :class="{'active-tab' : activeTab==2}" @click.stop="switchLeague('laliga',2)">{{__("buttons.laliga")}}</button>
-                <button  class="seriea-btn" :class="{'active-tab' : activeTab==3}" @click.stop="switchLeague('seriea',3)">{{__("buttons.seriea")}}</button>
-                <button  class="botolapro-btn" :class="{'active-tab' : activeTab==4}" @click.stop="switchLeague('botolapro',4)">{{__("buttons.botola")}}</button>
+                <button class="pl-btn" :class="{'active-tab' : activeTab==1}"  @click.stop="switchLeague('pl',1)"><img src="{{asset('images/pllogo.png')}}" alt="">{{__("buttons.epl")}}</button>
+                <button class="laliga-btn" :class="{'active-tab' : activeTab==2}" @click.stop="switchLeague('laliga',2)"><img src="{{asset('images/laligalogo.png')}}">{{__("buttons.laliga")}}</button>
+                <button  class="seriea-btn" :class="{'active-tab' : activeTab==3}" @click.stop="switchLeague('seriea',3)"><img src="{{asset('images/seriealogo.png')}}">{{__("buttons.seriea")}}</button>
+                <button  class="botolapro-btn" :class="{'active-tab' : activeTab==4}" @click.stop="switchLeague('botolapro',4)"><img src="{{asset('images/botolalogo.png')}}">{{__("buttons.botola")}}</button>
             </div>
             <div class="tables-container">
                 <league-rank rank='{{__("ranktable.rank")}}' played='{{__("ranktable.played")}}' team='{{__("ranktable.team")}}' points='{{__("ranktable.points")}}' :teams="{{$pl_rank}}" v-if="league=='pl'"></league-rank>

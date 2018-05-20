@@ -446,7 +446,7 @@ li{
 .leagues-rank{
   
   margin :auto;
-  width: 600px;
+  width: 750px;
 
     @media (max-width : $large-width){
       width: 100%;
@@ -455,11 +455,13 @@ li{
   button{
     font-family: $main_font;
     outline:none;
+    display:flex;
+    flex-wrap: wrap;
     background: $dark;
     color:$greenish;
     border: none;
     cursor: pointer;
-    width: 125px;
+    width: 160px;
     padding: 10px;
     margin : 0 10px;
     border-top-left-radius: 8px;
@@ -476,6 +478,11 @@ li{
   display: flex;
   flex-direction: row;
   width: 100%;
+
+  img{
+    width: 30px;
+    margin: 0 auto;
+  }
 }
 
 .tables-container{
@@ -944,7 +951,7 @@ hr{
 
     .title-n-button svg{
         margin : 0 5px;
-        color: #6D214F;
+        color: #41abff;
     }
 
     .title-n-button span{
@@ -1135,9 +1142,30 @@ hr{
 }
 
 .vs{
-  font-size: 15px;
-    background: $greenish;
+    font-size: 15px;
     margin: 0 5px;
     padding: 0 5px;
     border-radius: 5px;
+    color : gray;
 }
+
+.matches-container{
+  display: flex;
+  flex-wrap : wrap;
+  justify-content: space-between;
+  @media (max-width : $large-width){
+      flex-direction: column;
+   }
+}
+
+.match-box{
+  background: #fff;
+  margin: 10px;
+  flex:1;
+  text-align: center;
+  min-width: 300px;
+  @media (max-width : $large-width){
+      width : 100%;
+   }
+}
+

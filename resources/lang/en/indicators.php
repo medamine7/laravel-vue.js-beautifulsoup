@@ -7,7 +7,8 @@
         "more" => "More news",
         "ranking" => "Rankings & matches",
         "recommended" => "Recommended",
-        "other-videos" => "Other videos"
+        "other-videos" => "Other videos",
+        "today_matches" => "Today's Matches",
         
     ]
 
