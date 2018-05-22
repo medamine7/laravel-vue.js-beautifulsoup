@@ -1456,3 +1456,9 @@ hr {
   font-size: 2.5vh;
 }
 
+@media (max-width: 1000px) {
+  .owl-dots {
+    display: none;
+  }
+}
+

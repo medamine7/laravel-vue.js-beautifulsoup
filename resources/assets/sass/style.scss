@@ -1188,3 +1188,10 @@ hr{
     font-size:2.5vh;
   }
 }
+
+
+.owl-dots{
+    @media (max-width : $large-width){
+      display: none;
+   }
+}
