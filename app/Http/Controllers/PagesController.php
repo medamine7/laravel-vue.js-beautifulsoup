@@ -245,9 +245,11 @@ class PagesController extends Controller
 
 
     public function matches(){
+        
         $locale=session("locale");
         $leagues=Article_categorie::all();
-        $league_matches=[];
+        $today_league_matches=[];
+        $yesterday_league_matches=[];
         foreach($leagues as $league){
             $matches = Match::orderBy("date",'desc')->where('date',date("Y/m/d"))->where('league_id',$league->category_id)->get();
             
@@ -263,11 +265,29 @@ class PagesController extends Controller
                 });
             }
 
-            if($matches->isNotEmpty()) $locale=='ar' ? $league_matches[$league->category_name_ar]=$matches : $league_matches[$league->category_name_en]=$matches;      
+            if($matches->isNotEmpty()) $locale=='ar' ? $today_league_matches[$league->category_name_ar]=$matches : $today_league_matches[$league->category_name_en]=$matches;      
+        }
+            
+         foreach($leagues as $league){
+            $matches = Match::orderBy("date",'desc')->where('date',date("Y/m/d",time() - 60 * 60 * 24))->where('league_id',$league->category_id)->get();
+            
+            if ($locale=='ar'){
+                $matches->map(function($match){
+                    $match->home_team=$match->home_team_ar;
+                    $match->away_team=$match->away_team_ar;
+                });
+            }else{
+                $matches->map(function($match){
+                    $match->home_team=$match->home_team_en;
+                    $match->away_team=$match->away_team_en; 
+                });
+            }
+
+            if($matches->isNotEmpty()) $locale=='ar' ? $yesterday_league_matches[$league->category_name_ar]=$matches : $yesterday_league_matches[$league->category_name_en]=$matches;      
         }
             
 
-        return view('matches',["leagues" => $league_matches]);
+        return view('matches',["today_leagues" => $today_league_matches,"yesterday_leagues" => $yesterday_league_matches]);
     }
 
 }

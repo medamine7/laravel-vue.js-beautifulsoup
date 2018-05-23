@@ -9,6 +9,7 @@
         "recommended" => "أخبار مقترحة",
         "other-videos" => "فيديوهات أخرى",
         "today_matches" => "مباريات اليوم",
+        "yesterday_matches" => "مباريات الأمس"
         
     ]
 

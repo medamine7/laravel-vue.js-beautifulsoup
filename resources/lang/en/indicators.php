@@ -9,6 +9,7 @@
         "recommended" => "Recommended",
         "other-videos" => "Other videos",
         "today_matches" => "Today's Matches",
+        "yesterday_matches" => "Yesterday's Matches"
         
     ]
 
